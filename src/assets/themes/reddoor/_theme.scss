@@ -1,0 +1,222 @@
+
+
+// 基礎顏色
+$primary: #FF3333;           // 主色：鮮艷紅色（根據 Reddoor 標誌和英雄區背景）
+$down: #CC0D39;              // Down（錯誤狀態）：深紅色，與主色協調
+$up: #159E42;                // Up（成功狀態）：綠色，保持通用設計
+$white: #FFFFFF;             // 白色：用於文字和背景對比
+$background-light: #FFFFFF;  // 頁面底色：頂部導航和部分區塊為白色
+$background-dark: #1A1A1A;   // 深灰黑色背景：底部區塊和某些圖層
+$table-striped: #F7F8F9;     // 表格交替背景：淺灰，保持通用設計
+$border-disabled: #EBEBEB;   // 邊框/禁用狀態：淺灰，保持一致性
+
+// 對比顏色
+$heading: #FFFFFF;           // 主標題：白色（在紅色或深灰背景上）
+$body-text: #B0B0B0;         // 全站文字/次標題：中灰色（用於深灰或紅色背景）
+$placeholder: #707070;       // 欄位說明/提示文字：深灰色
+$note: #666666;              // 備註文字：更深的灰色
+
+// 字體設定
+$font-family: "PingFang TC", "微軟正黑體", sans-serif;
+
+// 字體大小（沿用 default 主題的規範）
+$font-size-h1: 2.5rem;       // 40px
+$font-size-h2: 1.5rem;       // 24px
+$font-size-h3: 1.25rem;      // 20px
+$font-size-body: 0.875rem;   // 14px
+$font-size-note: 0.75rem;    // 12px
+
+// 黃金比例推算輔助色（基於主色 #FF3333 與背景的對比）
+$golden-accent: #E63946;     // 暖紅色，與主色協調用於強調或裝飾
+
+// 對比色（流程圖和按鈕中使用的紫色）
+$contrast: #6A0DAD;          // 紫色，作為強烈對比的輔助色
+
+// CSS 變數 (供運行時切換使用)
+:root[data-theme="reddoor"] {
+    --primary: #FF3333;
+    --down: #CC0D39;
+    --up: #159E42;
+    --white: #FFFFFF;
+    --background-light: #FFFFFF;
+    --background-dark: #1A1A1A;
+    --table-striped: #F7F8F9;
+    --border-disabled: #EBEBEB;
+    --heading: #FFFFFF;
+    --body-text: #B0B0B0;
+    --placeholder: #707070;
+    --note: #666666;
+    --contrast: #6A0DAD;
+    --golden-accent: #E63946;
+    --font-family: "PingFang TC", "微軟正黑體", sans-serif;
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 1.5rem;
+    --font-size-h3: 1.25rem;
+    --font-size-body: 0.875rem;
+    --font-size-note: 0.75rem;
+  }
+
+  body {
+    font-family: var(--font-family);
+    background-color: var(--background-light);
+    color: var(--body-text);
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: var(--font-size-h1);
+    color: var(--heading);
+  }
+
+h2 {
+  font-size: var(--font-size-h2);
+  color: var(--heading);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  color: var(--body-text);
+}
+
+// 內文樣式
+p {
+  font-size: var(--font-size-body);
+}
+
+// 提示文字
+.note {
+  font-size: var(--font-size-note);
+  color: var(--note);
+}
+
+// 額外樣式：根據 Reddoor 設計加入主色和對比色的應用
+.hero {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.button-primary {
+  background-color: var(--primary);
+  color: var(--white);
+  border: 1px solid var(--primary);
+}
+
+.button-contrast {
+  background-color: var(--contrast);
+  color: var(--white);
+  border: 1px solid var(--contrast);
+}
+
+.footer {
+  background-color: var(--background-dark);
+  color: var(--white);
+}
+
+/* 共用頁面容器樣式 */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background-light);
+}
+
+/* 共用標頭樣式 */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-disabled);
+  z-index: 1000;
+  height: 56px;
+  padding-top: env(safe-area-inset-top, 0);
+}
+
+.header-content {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--body-text);
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.page-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--heading);
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+/* 主要內容區域 */
+.main-content {
+  flex: 1;
+  padding-top: 56px;
+  padding-bottom: 60px;
+  max-width: 768px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* 載入中狀態 */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  height: 50vh;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid var(--primary);
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 錯誤狀態 */
+.error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  height: 50vh;
+}
+
+.retry-button {
+  margin-top: 1rem;
+  padding: 8px 16px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

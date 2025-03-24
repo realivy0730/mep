@@ -1,0 +1,1 @@
+console.log('清除本地存儲快取...');\nlocalStorage.removeItem('api_tree_cache_data');\nlocalStorage.removeItem('api_coupons_summary_data');\nlocalStorage.removeItem('api_profile_data');\nconsole.log('快取已清除!');

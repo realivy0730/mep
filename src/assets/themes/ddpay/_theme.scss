@@ -1,0 +1,318 @@
+// src/assets/themes/default/_theme.scss
+
+// 基礎顏色
+$primary: #FC8802;           // 主色
+$down: #CC0D39;              // Down（錯誤狀態）
+$up: #159E42;                // Up（成功狀態）
+$white: #FFFFFF;             // 白色
+$background-light: #F9F9F9;  // 頁面底色
+$table-striped: #F7F8F9;     // 表格交替背景
+$border-disabled: #EBEBEB;   // 邊框/禁用狀態
+$primary-hover: #FC8802;
+
+
+// 對比顏色
+$heading: #293954;           // 主標題
+$body-text: #485771;         // 全站文字/次標題
+$placeholder: #929AA3;       // 欄位說明/提示文字
+$note: #666666;              // 備註文字
+$nav-text: #8494A5;
+
+// 字體設定
+$font-family: "Poppins", sans-serif;
+
+// 字體大小
+$font-size-h1: 2.5rem;       // 40px
+$font-size-h2: 1.5rem;       // 24px
+$font-size-h3: 1.25rem;      // 20px
+$font-size-h4: 1.125rem;      // 18px
+$font-size-h5: 1rem;      // 18px
+$font-size-body: 0.875rem;   // 14px
+$font-size-note: 0.75rem;    // 12px
+$spacing-xs: 3px;
+$spacing-sm: 5px;
+$spacing-md: 10px;
+$spacing-lg: 15px;
+$border-radius: 20px;
+$border-radius-lg: 30px;
+
+
+// CSS 變數 (供運行時切換使用)
+:root[data-theme="ddpay"] {
+  // 基礎顏色
+  --primary: #{$primary};
+  --down: #{$down};
+  --up: #{$up};
+  --white: #{$white};
+  --background-light: #{$background-light};
+  --table-striped: #{$table-striped};
+  --border-disabled: #{$border-disabled};
+
+  // 對比顏色
+  --heading: #{$heading};
+  --body-text: #{$body-text};
+  --placeholder: #{$placeholder};
+  --note: #{$note};
+  --nav-text: #{$nav-text};
+  --primary-hover: #{$primary-hover};
+
+  // 字體
+  --font-family: #{$font-family};
+  --font-size-h1: #{$font-size-h1};
+  --font-size-h2: #{$font-size-h2};
+  --font-size-h3: #{$font-size-h3};
+  --font-size-h4: #{$font-size-h4};
+  --font-size-h4: #{$font-size-h5};
+  --font-size-body: #{$font-size-body};
+  --font-size-note: #{$font-size-note};
+  --spacing-xs: #{$spacing-xs};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+  --border-radius: #{$border-radius};
+  --border-radius-lg: #{$border-radius-lg};
+}
+
+// 全局樣式
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-light);
+  color: var(--body-text);
+  line-height: 1.5;
+}
+
+// 標題樣式
+h1 {
+  font-size: var(--font-size-h1);
+  color: var(--heading);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  color: var(--heading);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  color: var(--body-text);
+}
+h4 {
+  font-size: var(--font-size-h4);
+}
+h5 {
+  font-size: var(--font-size-h5);
+}
+
+// 內文樣式
+p {
+  font-size: var(--font-size-body);
+}
+
+// 提示文字
+.note {
+  font-size: var(--font-size-note);
+  color: var(--note);
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
+  color: var(--heading);
+}
+
+/* 頁面容器 */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background-light);
+  padding-bottom: 80px; /* 為底部導航預留空間 */
+}
+
+/* 主要內容區域 */
+.main-content {
+  flex: 1;
+  max-width: 768px;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 57px; /* 為固定的header預留空間 */
+  overflow-y: auto;
+}
+
+/* Header 樣式 */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--white);
+  z-index: 1000;
+  height: 56px;
+  padding-top: env(safe-area-inset-top, 0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 16px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-button, .back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--heading);
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.page-title, .header-title {
+  font-size: var(--font-size-h3);
+  font-weight: 600;
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.header-right {
+  width: 40px; /* 與左側返回按鈕對稱 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 載入中狀態 */
+.loading-state, .loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  min-height: 200px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--primary);
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* 錯誤狀態 */
+.error-state, .error-container {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--down);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-message {
+    color: var(--down);
+    margin-bottom: $spacing-md;
+}
+
+.retry-button, .retry-btn {
+  margin-top: 16px;
+  padding: 8px 16px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--primary-hover);
+  }
+}
+
+/* 編輯按鈕、資訊按鈕等通用按鈕樣式 */
+.edit-button, .info-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--heading);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* 空狀態 */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  text-align: center;
+  color: var(--placeholder);
+  font-style: italic;
+  min-height: 200px;
+}
+
+.header-spacer {
+    width: 40px;
+    /* 與返回按鈕寬度相同，保持標題居中 */
+}
+
+
+.box{padding: 16px;}
+
+/* 使用按鈕 */
+.action-button-container {
+    padding: var(--spacing-md) var(--spacing-lg);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+}
+
+
+/* Safari 瀏覽器適配 */
+@supports (-webkit-touch-callout: none) {
+  .header {
+    padding-top: max(env(safe-area-inset-top), 20px);
+  }
+
+  .main-content {
+    padding-top: calc(56px + max(env(safe-area-inset-top), 20px));
+  }
+}

@@ -1,0 +1,19 @@
+@use "../../themes/default/_theme" as theme;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,ul li{
+    margin: 0; padding: 0; list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover, a:focus, a.active {
+    text-decoration: none;
+    outline: none;
+    color: var(--primary-hover);
+    transition: all 0.3s;
+}

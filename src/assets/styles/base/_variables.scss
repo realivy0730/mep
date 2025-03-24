@@ -1,0 +1,53 @@
+// src/themes/styles/base/_variables.scss
+
+// 主題色彩系統
+:root {
+    // 主要顏色
+    --primary-color: #FC8802;
+    --down-color: #CC0D39;
+    --up-color: #159E42;
+
+    // 背景色系
+    --bg-white: #FFFFFF;
+    --bg-light: #F9F9F9;
+    --border-disabled: #EBEBEB;
+
+    // 文字色系
+    --text-primary: #293954;
+    --text-placeholder: #929AA3;
+    --text-subtitle: #485771;
+
+    // 表格相關
+    --table-striped: #F7F8F9;
+
+    // 狀態顏色
+    --heading1: var(--text-primary);
+    --heading2: var(--text-primary);
+    --heading3: var(--text-primary);
+
+    // 連結顏色
+    --link-color: #FC8802;
+    --link-hover: #FC8802;
+  }
+
+  // 文字大小
+  $font-sizes: (
+    'h1': 2rem,
+    'h2': 1.75rem,
+    'h3': 1.5rem,
+    'body': 1rem,
+    'small': 0.875rem,
+  );
+
+  // 間距系統
+  $spacing: (
+    'xs': 0.25rem,
+    'sm': 0.5rem,
+    'md': 1rem,
+    'lg': 1.5rem,
+    'xl': 2rem,
+  );
+
+  // 定義非主題相關的全局變數
+$spacing-unit: 1rem;
+$border-radius: 4px;

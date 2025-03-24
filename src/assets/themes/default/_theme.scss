@@ -1,0 +1,55 @@
+// src/assets/themes/ddpay/_theme.scss
+
+// 基礎顏色
+$primary: #007BFF;           // 主色：鮮艷藍色（DDPay 的品牌色）
+$down: #CC0D39;              // Down（錯誤狀態）：深紅色，與其他主題一致
+$up: #28A745;                // Up（成功狀態）：綠色，稍亮一點
+$white: #FFFFFF;             // 白色：用於文字和背景對比
+$background-light: #F0F8FF;  // 頁面底色：淺藍白色，柔和背景
+$background-dark: #212529;   // 深色背景：用於底部或其他區塊
+$table-striped: #E9ECEF;     // 表格交替背景：淺灰色
+$border-disabled: #CED4DA;   // 邊框/禁用狀態：中灰色
+
+// 對比顏色
+$heading: #212529;           // 主標題：深灰黑色
+$body-text: #495057;         // 全站文字/次標題：中灰色
+$placeholder: #6C757D;       // 欄位說明/提示文字：淺灰色
+$note: #868E96;              // 備註文字：中性灰色
+
+// 字體設定
+$font-family: "Poppins", sans-serif;
+
+// 字體大小（沿用現有規範）
+$font-size-h1: 2.5rem;       // 40px
+$font-size-h2: 1.5rem;       // 24px
+$font-size-h3: 1.25rem;      // 20px
+$font-size-body: 0.875rem;   // 14px
+$font-size-note: 0.75rem;    // 12px
+
+// CSS 變數 (供運行時切換使用)
+:root[data-theme="default"] {
+  // 基礎顏色
+  --primary: #{$primary};
+  --down: #{$down};
+  --up: #{$up};
+  --white: #{$white};
+  --background-light: #{$background-light};
+  --background-dark: #{$background-dark};
+  --table-striped: #{$table-striped};
+  --border-disabled: #{$border-disabled};
+
+  // 對比顏色
+  --heading: #{$heading};
+  --body-text: #{$body-text};
+  --placeholder: #{$placeholder};
+  --note: #{$note};
+
+  // 字體
+  --font-family: #{$font-family};
+  --font-size-h1: #{$font-size-h1};
+  --font-size-h2: #{$font-size-h2};
+  --font-size-h3: #{$font-size-h3};
+  --font-size-body: #{$font-size-body};
+  --font-size-note: #{$font-size-note};
+}
+
