@@ -1,10 +1,37 @@
 /**
- * 主要 JavaScript 檔案
+ * 共用 Header 元件加載與控制
  */
 document.addEventListener('DOMContentLoaded', function() {
-  // 設置當前頁面的導航項目為活動狀態
-  setActiveNavItem();
+  // 加載 Header 元件
+  loadHeaderComponent();
 });
+
+/**
+ * 加載 Header 元件到頁面中
+ */
+function loadHeaderComponent() {
+  const headerPlaceholder = document.getElementById('header-placeholder');
+  if (!headerPlaceholder) return;
+
+  // 使用 fetch API 加載 header.html 檔案
+  fetch('components/header.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('無法加載 Header 元件');
+      }
+      return response.text();
+    })
+    .then(html => {
+      // 將 HTML 插入到佔位符元素中
+      headerPlaceholder.innerHTML = html;
+      
+      // 設置當前頁面的導航項目為活動狀態
+      setActiveNavItem();
+    })
+    .catch(error => {
+      console.error('加載 Header 元件時發生錯誤:', error);
+    });
+}
 
 /**
  * 根據當前頁面 URL 設置對應的導航項目為活動狀態
