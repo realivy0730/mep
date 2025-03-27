@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登入/註冊 - 中華民國能源效率管理系統</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <!-- 添加 Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="energy-system">
+      <!-- Header 元件佔位符 -->
+      <div id="header-placeholder"></div>
+
+      <!-- Breadcrumb Navigation -->
+      <div class="breadcrumb-container container">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="index.html">首頁</a>
+          </li>
+          <li class="breadcrumb-item active">登入/註冊</li>
+        </ul>
+      </div>
+
+      <!-- Main Content Area -->
+      <main class="main-content container">
+        <div class="login-container">
+          <div>
+            <div class="login-tabs">
+              <div class="login-tab active">廠商登入</div>
+              <div class="login-tab">廠商註冊下載申請表</div>
+            </div>
+            <div class="login-form-container">
+              <form id="login-form">
+                <div class="form-group">
+                  <label for="company-id">廠商帳號</label>
+                  <div class="form-control">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="company-id" placeholder="輸入帳號" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="password">密碼</label>
+                  <div class="form-control">
+                    <i class="fas fa-lock"></i>
+                    <input
+                      type="password"
+                      id="password"
+                      placeholder="輸入密碼"
+                    />
+                    <button
+                      type="button"
+                      class="toggle-password"
+                      aria-label="切換密碼顯示"
+                    >
+                      <i class="fas fa-eye-slash"></i>
+                    </button>
+                  </div>
+                  <div class="case-sensitive">請注意大小寫</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="captcha">驗證碼</label>
+                  <div class="captcha-container">
+                    <div class="form-control" style="width: 65%">
+                      <input
+                        type="text"
+                        id="captcha"
+                        placeholder="輸入驗證碼"
+                      />
+                    </div>
+                    <img
+                      src="images/captcha.png"
+                      alt="驗證碼"
+                      class="captcha-image"
+                      width="100"
+                      height="35"
+                    />
+                  </div>
+                  <div class="refresh-container">
+                    <a href="#" class="refresh-captcha">重新產生</a>
+                  </div>
+                </div>
+
+                <button type="submit" class="submit-btn">登入</button>
+
+                <a href="#" class="forgot-password">忘記密碼</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer 元件佔位符 -->
+      <div id="footer-placeholder"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <!-- 引入 Header 元件的 JavaScript -->
+    <script src="js/header.js"></script>
+    <!-- 引入 Footer 元件的 JavaScript -->
+    <script src="js/footer.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

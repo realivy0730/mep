@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>問與答 - 中華民國能源效率管理系統</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- 添加 Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="energy-system">
+      <!-- Header 元件佔位符 -->
+      <div id="header-placeholder"></div>
+
+      <!-- Breadcrumb Navigation -->
+      <div class="breadcrumb-container container">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="index.html">首頁</a>
+          </li>
+          <li class="breadcrumb-item active">問與答</li>
+        </ul>
+      </div>
+
+      <!-- Main Content Area -->
+      <main class="main-content container">
+        <div class="content-wrapper">
+          <!-- Sidebar -->
+          <aside class="sidebar">
+            <div class="search-section">
+              <h3 class="search-title">搜尋</h3>
+              <div class="search-box">
+                <input type="text" placeholder="Search" class="search-input" />
+                <button class="search-button">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+
+              <div class="category-filter">
+                <h3 class="filter-title">問題分類</h3>
+                <div class="select-wrapper">
+                  <select class="filter-select">
+                    <option>全部</option>
+                    <option>系統操作</option>
+                    <option>電動機</option>
+                    <option>空壓機</option>
+                    <option>水泵</option>
+                    <option>通風機</option>
+                    <option>法規相關</option>
+                  </select>
+                </div>
+              </div>
+
+              <button class="submit-button">確認</button>
+            </div>
+          </aside>
+
+          <!-- Content Area -->
+          <div class="content">
+            <div class="content-header">
+              <h2 class="content-title">問與答</h2>
+              <div class="content-controls">
+                <span>排序方式</span>
+                <div class="sort-select-wrapper">
+                  <select class="sort-select">
+                    <option>最新問題</option>
+                    <option>熱門問題</option>
+                    <option>依分類</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 列表 -->
+            <div class="faq-list">
+              <!-- FAQ 類別 1 -->
+              <div class="faq-category">
+                <h3 class="category-title">系統操作</h3>
+
+                <!-- FAQ 項目 1 -->
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <h4>如何註冊成為系統使用者？</h4>
+                    <button class="toggle-answer">
+                      <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>
+                      請點選網站右上方的「登入/註冊」按鈕，選擇「註冊新帳號」，並依照指示填寫相關資料。完成後，系統會寄送一封驗證信件至您提供的電子郵件，請點擊信中的連結完成註冊程序。
+                    </p>
+                  </div>
+                </div>
+
+                <!-- FAQ 項目 2 -->
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <h4>忘記密碼該如何處理？</h4>
+                    <button class="toggle-answer">
+                      <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>
+                      請點選「登入/註冊」頁面中的「忘記密碼」連結，輸入您的註冊電子郵件，系統將會寄送重設密碼的信件給您。請依照信件中的指示進行操作。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 類別 2 -->
+              <div class="faq-category">
+                <h3 class="category-title">電動機</h3>
+
+                <!-- FAQ 項目 1 -->
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <h4>電動機效率等級如何區分？</h4>
+                    <button class="toggle-answer">
+                      <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>
+                      目前電動機效率等級主要依據國際電工委員會(IEC)標準，分為IE1、IE2、IE3和IE4四個等級，其中IE4為超高效率等級，IE3為高效率等級，IE2為高效率等級，IE1為標準效率等級。在台灣，依據「低壓三相鼠籠型感應電動機能源效率基準、效率標示及檢查方式」規定，新產品須符合IE3以上的效率標準。
+                    </p>
+                  </div>
+                </div>
+
+                <!-- FAQ 項目 2 -->
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <h4>電動機產品登錄需要提供哪些資料？</h4>
+                    <button class="toggle-answer">
+                      <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>
+                      電動機產品登錄需提供以下資料：<br />
+                      1. 產品型錄或規格表<br />
+                      2. 產品效率測試報告<br />
+                      3. 符合性聲明書<br />
+                      4. 產品銘牌照片<br />
+                      5. 企業登記證明文件<br />
+                      詳細資訊請參考「低壓三相鼠籠型感應電動機能源效率基準、效率標示及檢查方式」的相關規定。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 類別 3 -->
+              <div class="faq-category">
+                <h3 class="category-title">空壓機</h3>
+
+                <!-- FAQ 項目 1 -->
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <h4>空氣壓縮機容許耗用能源基準是什麼？</h4>
+                    <button class="toggle-answer">
+                      <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>
+                      空氣壓縮機容許耗用能源基準是依據「空氣壓縮機容許耗用能源基準與能源效率分級標示方法、方法及檢查方式」制定，主要評估指標為單位空氣量耗電功率，單位為kW/(m³/min)，數值越低代表效率越高。詳細的基準值請參考最新公告的法規文件。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 類別 4 -->
+              <div class="faq-category">
+                <h3 class="category-title">法規相關</h3>
+
+                <!-- FAQ 項目 1 -->
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <h4>未符合能源效率標準的產品可以進口或銷售嗎？</h4>
+                    <button class="toggle-answer">
+                      <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>
+                      依據「能源管理法」規定，未符合公告的能源效率標準之產品，不得進口或在國內銷售。違反者將依法處以罰鍰，並限期改善；屆期未改善者，得按次連續處罰，或令其停止銷售或進口。
+                    </p>
+                  </div>
+                </div>
+
+                <!-- FAQ 項目 2 -->
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <h4>能源效率標示的規格與項目有哪些？</h4>
+                    <button class="toggle-answer">
+                      <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>
+                      能源效率標示的規格與項目依不同產品類別而有所差異，但一般包含以下資訊：<br />
+                      1. 製造廠商名稱及地址<br />
+                      2. 產品型號<br />
+                      3. 能源效率等級<br />
+                      4. 耗電量或能源消耗率<br />
+                      5. 登錄編號<br />
+                      6. 其他依法規要求的特定資訊<br />
+                      詳細內容請參考各產品類別的相關法規規定。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+              <div class="pagination-controls">
+                <button class="pagination-btn first-page">
+                  <i class="fas fa-angle-double-left"></i>
+                </button>
+                <button class="pagination-btn prev-page">
+                  <i class="fas fa-angle-left"></i>
+                </button>
+                <div class="page-numbers">
+                  <button class="page-number active">1</button>
+                  <button class="page-number">2</button>
+                  <button class="page-number">3</button>
+                  <span class="page-ellipsis">...</span>
+                  <button class="page-number">10</button>
+                </div>
+                <button class="pagination-btn next-page">
+                  <i class="fas fa-angle-right"></i>
+                </button>
+                <button class="pagination-btn last-page">
+                  <i class="fas fa-angle-double-right"></i>
+                </button>
+              </div>
+              <div class="items-per-page">
+                <span>項目</span>
+                <div class="items-select-wrapper">
+                  <select class="items-select">
+                    <option>8</option>
+                    <option>16</option>
+                    <option>24</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer 元件佔位符 -->
+      <div id="footer-placeholder"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <!-- 引入 Header 元件的 JavaScript -->
+    <script src="js/header.js"></script>
+    <!-- 引入 Footer 元件的 JavaScript -->
+    <script src="js/footer.js"></script>
+
+    <!-- FAQ 頁面專用 JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 問答切換功能
+        const toggleButtons = document.querySelectorAll(".toggle-answer");
+
+        toggleButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const faqItem = this.closest(".faq-item");
+            const answer = faqItem.querySelector(".faq-answer");
+            const icon = this.querySelector("i");
+
+            // 切換顯示/隱藏回答
+            if (answer.style.display === "block") {
+              answer.style.display = "none";
+              icon.classList.remove("fa-chevron-up");
+              icon.classList.add("fa-chevron-down");
+            } else {
+              answer.style.display = "block";
+              icon.classList.remove("fa-chevron-down");
+              icon.classList.add("fa-chevron-up");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
