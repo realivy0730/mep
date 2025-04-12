@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>資料下載 - 中華民國能源效率管理系統</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <!-- 修改 CSS 路徑，確保與檔案結構相符 -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/downloads.css" />
     <!-- 添加 Font Awesome -->
     <link
       rel="stylesheet"
@@ -27,117 +29,119 @@
       </div>
 
       <!-- Main Content Area -->
-      <main class="main-content container">
-        <div class="content-wrapper">
-          <!-- Content Area -->
-          <div class="content">
-            <div class="content-header">
-              <h2 class="content-title">資料下載</h2>
-            </div>
+      <main class="main-content">
+        <div class="container">
+          <div class="content-wrapper">
+            <!-- Content Area -->
+            <div class="content">
+              <div class="content-header">
+                <h2 class="content-title">資料下載</h2>
+              </div>
 
-            <div class="download-description">
-              <p class="download-intro">
-                為促進容許耗用能源效率資訊之公開透明，並配合政府提升創新研發與服務以擴大知識產業之目標，能源署開放政府資料（Open
-                Data）之服務網頁，提供容許耗用能源效率資訊相關之資料集（Dataset）供下載使用。
-              </p>
-            </div>
+              <div class="download-description">
+                <p class="download-intro">
+                  為促進容許耗用能源效率資訊之公開透明，並配合政府提升創新研發與服務以擴大知識產業之目標，能源署開放政府資料（Open
+                  Data）之服務網頁，提供容許耗用能源效率資訊相關之資料集（Dataset）供下載使用。
+                </p>
+              </div>
 
-            <div class="download-notice">
-              <p>
-                本網站所提供之資料集編碼格式為 UTF-8，若使用 Microsoft EXCEL
-                軟體開啟CSV檔案時，會出現中文無法正確顯示，其因為EXCEL軟體預設檔案編碼設定為ANSI
-                編碼，故會出現亂碼情況。
-              </p>
-              <p>
-                若您嘗試使用EXCEL
-                軟體開啟CSV檔案請參照下列兩個方法解決CSV開啟為亂碼的問題。
-              </p>
-            </div>
+              <div class="download-notice">
+                <p>
+                  本網站所提供之資料集編碼格式為 UTF-8，若使用 Microsoft EXCEL
+                  軟體開啟CSV檔案時，會出現中文無法正確顯示，其因為EXCEL軟體預設檔案編碼設定為ANSI
+                  編碼，故會出現亂碼情況。
+                </p>
+                <p>
+                  若您嘗試使用EXCEL
+                  軟體開啟CSV檔案請參照下列兩個方法解決CSV開啟為亂碼的問題。
+                </p>
+              </div>
 
-            <div class="download-instructions">
-              <ol>
-                <li>以記事本開啟後儲存，再以Excel開啟即可正常顯示。</li>
-                <li>
-                  開啟Excel軟體，新增空白活頁簿，然後在上方功能選項中點選「資料」->「取得外部資料」->「從文字檔」->「選擇csv文件」，並以選擇分隔，即可正常顯示。
-                </li>
-              </ol>
-            </div>
+              <div class="download-instructions">
+                <ol>
+                  <li>以記事本開啟後儲存，再以Excel開啟即可正常顯示。</li>
+                  <li>
+                    開啟Excel軟體，新增空白活頁簿，然後在上方功能選項中點選「資料」->「取得外部資料」->「從文字檔」->「選擇csv文件」，並以選擇分隔，即可正常顯示。
+                  </li>
+                </ol>
+              </div>
 
-            <!-- 資料下載表格 -->
-            <div class="download-table">
-              <table class="data-table">
-                <thead>
-                  <tr>
-                    <th>名稱</th>
-                    <th>內容</th>
-                    <th>資料集類型</th>
-                    <th>格式</th>
-                    <th>下載</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>低壓三相鼠籠型感應電動機</td>
-                    <td>
-                      產品能源效率相關資訊：標示義務公司、登錄編號、產品型號、額定功率(瓦動時之效率)、效率等級、最低能源效率基準、IP碼
-                    </td>
-                    <td>Raw Data</td>
-                    <td>
-                      <a href="#" class="csv-link">CSV</a>
-                    </td>
-                    <td>
-                      <a href="#" class="download-btn">
-                        <i class="fas fa-download"></i>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>固定輔建迴轉式空氣壓縮機</td>
-                    <td>
-                      產品能源效率相關資訊：標示義務公司、登錄編號、產品型號、額定功率(kW)、流量(容積排氣)量(Hz)、流量消耗電功率(kW)、冷卻方式、濾載入口轉速(量)(立方公尺/分鐘)、出口壓力(kgf/cm²)、等級效率(%)、效率等級、最低能源效率基準
-                    </td>
-                    <td>Raw Data</td>
-                    <td>
-                      <a href="#" class="csv-link">CSV</a>
-                    </td>
-                    <td>
-                      <a href="#" class="download-btn">
-                        <i class="fas fa-download"></i>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>可變輔建迴轉式空氣壓縮機</td>
-                    <td>
-                      產品能源效率相關資訊：標示義務公司、登錄編號、產品型號、額定功率(kW)、流量(容積排氣)量(Hz)、流量消耗電功率(kW)、冷卻方式、濾載入口轉速(量)(立方公尺/分鐘)、出口壓力(kgf/cm²)、等級效率(%)、效率等級、最低能源效率基準
-                    </td>
-                    <td>Raw Data</td>
-                    <td>
-                      <a href="#" class="csv-link">CSV</a>
-                    </td>
-                    <td>
-                      <a href="#" class="download-btn">
-                        <i class="fas fa-download"></i>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>活塞式空氣壓縮機</td>
-                    <td>
-                      產品能源效率相關資訊：標示義務公司、登錄編號、產品型號、額定功率(kW)、流量(容積排氣)量(Hz)、流量消耗電功率(kW)、冷卻方式、濾載入口轉速(量)(立方公尺/分鐘)、出口壓力(kgf/cm²)、等級效率(%)、效率等級、最低能源效率基準
-                    </td>
-                    <td>Raw Data</td>
-                    <td>
-                      <a href="#" class="csv-link">CSV</a>
-                    </td>
-                    <td>
-                      <a href="#" class="download-btn">
-                        <i class="fas fa-download"></i>
-                      </a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <!-- 資料下載表格 -->
+              <div class="download-table">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>名稱</th>
+                      <th>內容</th>
+                      <th>資料集類型</th>
+                      <th>格式</th>
+                      <th>下載</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>低壓三相鼠籠型感應電動機</td>
+                      <td>
+                        產品能源效率相關資訊：標示義務公司、登錄編號、產品型號、額定功率(瓦動時之效率)、效率等級、最低能源效率基準、IP碼
+                      </td>
+                      <td>Raw Data</td>
+                      <td>
+                        <a href="#" class="csv-link">CSV</a>
+                      </td>
+                      <td>
+                        <a href="#" class="download-btn">
+                          <i class="fas fa-download"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>固定輔建迴轉式空氣壓縮機</td>
+                      <td>
+                        產品能源效率相關資訊：標示義務公司、登錄編號、產品型號、額定功率(kW)、流量(容積排氣)量(Hz)、流量消耗電功率(kW)、冷卻方式、濾載入口轉速(量)(立方公尺/分鐘)、出口壓力(kgf/cm²)、等級效率(%)、效率等級、最低能源效率基準
+                      </td>
+                      <td>Raw Data</td>
+                      <td>
+                        <a href="#" class="csv-link">CSV</a>
+                      </td>
+                      <td>
+                        <a href="#" class="download-btn">
+                          <i class="fas fa-download"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>可變輔建迴轉式空氣壓縮機</td>
+                      <td>
+                        產品能源效率相關資訊：標示義務公司、登錄編號、產品型號、額定功率(kW)、流量(容積排氣)量(Hz)、流量消耗電功率(kW)、冷卻方式、濾載入口轉速(量)(立方公尺/分鐘)、出口壓力(kgf/cm²)、等級效率(%)、效率等級、最低能源效率基準
+                      </td>
+                      <td>Raw Data</td>
+                      <td>
+                        <a href="#" class="csv-link">CSV</a>
+                      </td>
+                      <td>
+                        <a href="#" class="download-btn">
+                          <i class="fas fa-download"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>活塞式空氣壓縮機</td>
+                      <td>
+                        產品能源效率相關資訊：標示義務公司、登錄編號、產品型號、額定功率(kW)、流量(容積排氣)量(Hz)、流量消耗電功率(kW)、冷卻方式、濾載入口轉速(量)(立方公尺/分鐘)、出口壓力(kgf/cm²)、等級效率(%)、效率等級、最低能源效率基準
+                      </td>
+                      <td>Raw Data</td>
+                      <td>
+                        <a href="#" class="csv-link">CSV</a>
+                      </td>
+                      <td>
+                        <a href="#" class="download-btn">
+                          <i class="fas fa-download"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>

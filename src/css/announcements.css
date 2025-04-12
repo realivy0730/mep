@@ -1,0 +1,68 @@
+
+/* Announcements Table Styles */
+
+  .announcement-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-light);
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  .announcement-content {
+    flex-grow: 1;
+    padding-right: var(--spacing-sm);
+  }
+
+  .announcement-title {
+    font-size: var(--font-base);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+    font-weight: normal;
+  }
+
+  .announcement-title a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .announcement-title a:hover {
+    color: var(--secondary-color);
+  }
+
+  .announcement-date {
+    font-size: var(--font-xs);
+    color: var(--text-light);
+  }
+
+  .announcement-status {
+    width: 100px;
+    text-align: center;
+  }
+
+  .status-badge {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-xs);
+  }
+
+  .status-badge.current {
+    background-color: #e6f0f8;
+    color: var(--secondary-color);
+  }
+
+  .status-badge.deprecated {
+    background-color: #f8f0e6;
+    color: #794f0c;
+  }
+
+  .announcement-action {
+    width: 50px;
+    text-align: center;
+  }
+
+  .action-button {
+    color: var(--secondary-color);
+    font-size: var(--font-sm);
+  }

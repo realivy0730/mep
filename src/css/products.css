@@ -1,0 +1,347 @@
+
+.products-table .table-header {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1.5fr 1fr 0.5fr;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .product-item {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1.5fr 1fr 0.5fr;
+    padding: var(--spacing-md) var(--spacing-lg);
+    align-items: center;
+  }
+
+  .product-spec p {
+    font-size: var(--font-xs);
+    color: var(--text-secondary);
+    line-height: 1.4;
+  }
+
+  .product-company p {
+    font-size: var(--font-sm);
+    color: var(--text-primary);
+  }
+
+  .product-efficiency {
+    text-align: center;
+  }
+
+  .efficiency-label {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-xs);
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .grade-1 {
+    background-color: #2ecc71;
+  }
+
+  .grade-2 {
+    background-color: #27ae60;
+  }
+
+  .grade-3 {
+    background-color: #f39c12;
+  }
+
+  .grade-4 {
+    background-color: #e67e22;
+  }
+
+  .grade-5 {
+    background-color: #e74c3c;
+  }
+
+  .power-range {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .small-select {
+    flex: 1;
+  }
+
+  .range-separator {
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  /* 響應式調整 */
+  @media (max-width: 992px) {
+    .products-table .table-header,
+    .product-item {
+      grid-template-columns: 1.5fr 2.5fr 1fr 0.8fr 0.5fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .products-table .table-header {
+      display: none;
+    }
+
+    .product-item {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-sm);
+    }
+
+    .product-spec,
+    .product-company,
+    .product-efficiency {
+      position: relative;
+      padding-left: 100px;
+    }
+
+    .product-spec::before,
+    .product-company::before,
+    .product-efficiency::before {
+      position: absolute;
+      left: 0;
+      font-weight: 600;
+      font-size: var(--font-xs);
+    }
+
+    .product-spec::before {
+      content: "產品型號:";
+    }
+
+    .product-company::before {
+      content: "標示義務公司:";
+    }
+
+    .product-efficiency::before {
+      content: "效率等級:";
+    }
+
+    .product-efficiency {
+      text-align: left;
+    }
+
+    .product-action {
+      text-align: right;
+    }
+  }
+
+
+  /* 產品詳情頁面樣式 */
+.product-detail {
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .product-header {
+    margin-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: var(--spacing-lg);
+  }
+
+  .product-title {
+    font-size: var(--font-lg);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .product-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    color: var(--text-secondary);
+    font-size: var(--font-sm);
+  }
+
+  .meta-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .meta-label {
+    font-weight: 600;
+    margin-right: var(--spacing-xs);
+  }
+
+  .product-content {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .product-info-section {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .section-title {
+    font-size: var(--font-lg);
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+    padding-left: var(--spacing-sm);
+    border-left: 4px solid var(--secondary-color);
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .info-item {
+    padding: var(--spacing-md);
+    background-color: var(--bg-light);
+    border-radius: var(--radius-sm);
+  }
+
+  .info-item.full-width {
+    grid-column: 1 / -1;
+  }
+
+  .info-label {
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: var(--font-sm);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .info-value {
+    color: var(--text-primary);
+    font-size: var(--font-base);
+  }
+
+  .efficiency-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-xs);
+  }
+
+  .efficiency-table th,
+  .efficiency-table td {
+    padding: var(--spacing-md);
+    border: 1px solid #dee2e6;
+    text-align: center;
+  }
+
+  .efficiency-table th {
+    background-color: var(--bg-secondary);
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .test-pass {
+    color: #28a745;
+    font-weight: 600;
+  }
+
+  .test-fail {
+    color: #dc3545;
+    font-weight: 600;
+  }
+
+  .product-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-light);
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+  }
+
+  .action-btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--bg-secondary);
+    color: var(--secondary-color);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-sm);
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+  }
+
+  .action-btn i {
+    margin-right: var(--spacing-xs);
+  }
+
+  .action-btn:hover {
+    background-color: #e6edf5;
+  }
+
+  .navigation-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+  }
+
+  .nav-btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--secondary-color);
+    color: #fff;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-sm);
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+  }
+
+  .nav-btn i {
+    margin-right: var(--spacing-xs);
+  }
+
+  .nav-btn.next-btn i {
+    margin-right: 0;
+    margin-left: var(--spacing-xs);
+  }
+
+  .nav-btn:hover {
+    background-color: #092a5e;
+  }
+
+  .nav-btn.list-btn {
+    background-color: #666;
+  }
+
+  .nav-btn.list-btn:hover {
+    background-color: #555;
+  }
+
+  /* 響應式調整 */
+  @media (max-width: 768px) {
+    .product-header {
+      padding-bottom: var(--spacing-md);
+    }
+
+    .product-meta {
+      flex-direction: column;
+      gap: var(--spacing-sm);
+    }
+
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .product-actions {
+      flex-direction: column;
+      gap: var(--spacing-md);
+    }
+
+    .navigation-buttons {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .efficiency-table {
+      font-size: var(--font-xs);
+    }
+
+    .efficiency-table th,
+    .efficiency-table td {
+      padding: var(--spacing-xs) var(--spacing-sm);
+    }
+  }
