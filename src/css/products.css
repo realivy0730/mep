@@ -1,347 +1,266 @@
-
-.products-table .table-header {
-    display: grid;
-    grid-template-columns: 2fr 3fr 1.5fr 1fr 0.5fr;
-    padding: var(--spacing-sm) var(--spacing-md);
-  }
-
-  .product-item {
-    display: grid;
-    grid-template-columns: 2fr 3fr 1.5fr 1fr 0.5fr;
-    padding: var(--spacing-md) var(--spacing-lg);
-    align-items: center;
-  }
-
-  .product-spec p {
-    font-size: var(--font-xs);
-    color: var(--text-secondary);
-    line-height: 1.4;
-  }
-
-  .product-company p {
-    font-size: var(--font-sm);
-    color: var(--text-primary);
-  }
-
-  .product-efficiency {
-    text-align: center;
-  }
-
-  .efficiency-label {
-    display: inline-block;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: var(--radius-sm);
-    font-size: var(--font-xs);
-    font-weight: 600;
-    color: #fff;
-  }
-
-  .grade-1 {
-    background-color: #2ecc71;
-  }
-
-  .grade-2 {
-    background-color: #27ae60;
-  }
-
-  .grade-3 {
-    background-color: #f39c12;
-  }
-
-  .grade-4 {
-    background-color: #e67e22;
-  }
-
-  .grade-5 {
-    background-color: #e74c3c;
-  }
-
-  .power-range {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-  }
-
-  .small-select {
+.inner-content {
     flex: 1;
-  }
+}
 
-  .range-separator {
-    color: var(--text-secondary);
-    font-weight: 600;
-  }
-
-  /* 響應式調整 */
-  @media (max-width: 992px) {
-    .products-table .table-header,
-    .product-item {
-      grid-template-columns: 1.5fr 2.5fr 1fr 0.8fr 0.5fr;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .products-table .table-header {
-      display: none;
-    }
-
-    .product-item {
-      grid-template-columns: 1fr;
-      gap: var(--spacing-sm);
-    }
-
-    .product-spec,
-    .product-company,
-    .product-efficiency {
-      position: relative;
-      padding-left: 100px;
-    }
-
-    .product-spec::before,
-    .product-company::before,
-    .product-efficiency::before {
-      position: absolute;
-      left: 0;
-      font-weight: 600;
-      font-size: var(--font-xs);
-    }
-
-    .product-spec::before {
-      content: "產品型號:";
-    }
-
-    .product-company::before {
-      content: "標示義務公司:";
-    }
-
-    .product-efficiency::before {
-      content: "效率等級:";
-    }
-
-    .product-efficiency {
-      text-align: left;
-    }
-
-    .product-action {
-      text-align: right;
-    }
-  }
-
-
-  /* 產品詳情頁面樣式 */
-.product-detail {
-    background-color: var(--bg-primary);
-    border-radius: var(--radius-md);
-    padding: var(--spacing-xl);
-    box-shadow: var(--shadow-sm);
-  }
-
-  .product-header {
-    margin-bottom: var(--spacing-xl);
-    border-bottom: 1px solid var(--border-light);
-    padding-bottom: var(--spacing-lg);
-  }
-
-  .product-title {
-    font-size: var(--font-lg);
-    color: var(--text-primary);
-    margin-bottom: var(--spacing-md);
-    font-weight: 600;
-    line-height: 1.4;
-  }
-
-  .product-meta {
+.range-selector {
     display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-lg);
-    color: var(--text-secondary);
-    font-size: var(--font-sm);
-  }
+}
 
-  .meta-item {
+.range-selector .select-wrapper {
+    width: 50%;
+}
+
+.range-selector .select-wrapper .dropdown {
+    min-width: inherit
+}
+
+.range-separator {
     display: flex;
     align-items: center;
-  }
+    justify-content: center;
+    margin: 0 5px;
+}
 
-  .meta-label {
-    font-weight: 600;
-    margin-right: var(--spacing-xs);
-  }
+.sidebar .btn {
+    margin: 0 auto;
+}
 
-  .product-content {
-    margin-bottom: var(--spacing-xl);
-  }
 
-  .product-info-section {
-    margin-bottom: var(--spacing-xl);
-  }
-
-  .section-title {
-    font-size: var(--font-lg);
-    color: var(--secondary-color);
-    margin-bottom: var(--spacing-md);
-    font-weight: 600;
-    padding-left: var(--spacing-sm);
-    border-left: 4px solid var(--secondary-color);
-  }
-
-  .info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: var(--spacing-md);
-  }
-
-  .info-item {
-    padding: var(--spacing-md);
-    background-color: var(--bg-light);
-    border-radius: var(--radius-sm);
-  }
-
-  .info-item.full-width {
-    grid-column: 1 / -1;
-  }
-
-  .info-label {
-    font-weight: 600;
-    color: var(--text-secondary);
-    font-size: var(--font-sm);
-    margin-bottom: var(--spacing-xs);
-  }
-
-  .info-value {
-    color: var(--text-primary);
-    font-size: var(--font-base);
-  }
-
-  .efficiency-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: var(--spacing-xs);
-  }
-
-  .efficiency-table th,
-  .efficiency-table td {
-    padding: var(--spacing-md);
-    border: 1px solid #dee2e6;
-    text-align: center;
-  }
-
-  .efficiency-table th {
-    background-color: var(--bg-secondary);
-    font-weight: 600;
-    color: var(--text-primary);
-  }
-
-  .test-pass {
-    color: #28a745;
-    font-weight: 600;
-  }
-
-  .test-fail {
-    color: #dc3545;
-    font-weight: 600;
-  }
-
-  .product-actions {
+.content-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: var(--spacing-xl);
-    padding-top: var(--spacing-lg);
-    border-top: 1px solid var(--border-light);
-  }
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 20px;
+}
 
-  .action-buttons {
-    display: flex;
-    gap: var(--spacing-sm);
-  }
-
-  .action-btn {
-    padding: var(--spacing-xs) var(--spacing-sm);
-    background-color: var(--bg-secondary);
-    color: var(--secondary-color);
-    border-radius: var(--radius-sm);
-    font-size: var(--font-sm);
+/* 日期範圍控制區域 */
+.date-range-controls {
     display: flex;
     align-items: center;
-    transition: background-color 0.3s;
-  }
+    gap: 10px;
+}
 
-  .action-btn i {
-    margin-right: var(--spacing-xs);
-  }
+.date-range-separator {
 
-  .action-btn:hover {
-    background-color: #e6edf5;
-  }
+    color: #333;
+}
 
-  .navigation-buttons {
-    display: flex;
-    gap: var(--spacing-sm);
-  }
+.date-input-wrapper {
+    position: relative;
+    width: 150px;
+}
 
-  .nav-btn {
-    padding: var(--spacing-xs) var(--spacing-sm);
-    background-color: var(--secondary-color);
+.date-input {
+    width: 100%;
+    padding: 8px 35px 8px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+
+    background-color: white;
+}
+
+.date-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+
+    pointer-events: none;
+}
+
+/* 日期選擇器額外樣式 */
+.date-input-wrapper {
+    position: relative;
+    width: 150px;
+}
+
+.date-input {
+    width: 100%;
+    padding: 8px 35px 8px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.date-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    pointer-events: auto;
+    /* 允許圖標能夠被點擊 */
+}
+
+/* Flatpickr 樣式自定義 */
+.flatpickr-calendar {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+    background: #3a6ea5;
+    border-color: #3a6ea5;
+}
+
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover {
+    background: #2c5782;
+    border-color: #2c5782;
+}
+
+.flatpickr-day.today {
+    border-color: #3a6ea5;
+}
+
+.flatpickr-day.inRange {
+    background: #e6f0fa;
+    border-color: #e6f0fa;
+}
+
+.flatpickr-months .flatpickr-month {
+    background-color: #3a6ea5;
+}
+
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-next-month {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.flatpickr-months .flatpickr-prev-month:hover,
+.flatpickr-months .flatpickr-next-month:hover {
     color: #fff;
-    border-radius: var(--radius-sm);
-    font-size: var(--font-sm);
-    display: flex;
-    align-items: center;
-    transition: background-color 0.3s;
-  }
+}
 
-  .nav-btn i {
-    margin-right: var(--spacing-xs);
-  }
+.flatpickr-current-month {
+    color: #fff;
+}
 
-  .nav-btn.next-btn i {
-    margin-right: 0;
-    margin-left: var(--spacing-xs);
-  }
+.flatpickr-weekday {
+    color: #3a6ea5;
+}
 
-  .nav-btn:hover {
-    background-color: #092a5e;
-  }
+/* 確保日期選擇器在較小屏幕上正確顯示 */
+@media (max-width: 480px) {
+    .date-input-wrapper {
+        width: 120px;
+    }
+}
 
-  .nav-btn.list-btn {
-    background-color: #666;
-  }
 
-  .nav-btn.list-btn:hover {
-    background-color: #555;
-  }
+.products-table table th:nth-child(1) {
+    width: 30%;
+}
 
-  /* 響應式調整 */
-  @media (max-width: 768px) {
-    .product-header {
-      padding-bottom: var(--spacing-md);
+.products-table table th:nth-child(2) {
+    width: 40%;
+}
+
+.products-table table th:nth-child(4) {
+    width: 15%;
+}
+
+.products-table table td:nth-child(2) {
+    color: #0D6389;
+}
+
+.innerproducts-table td:nth-child(1) {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.innerproducts-table td:nth-child(2) {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0D6389;
+}
+
+/* Make table rows clickable */
+.products-table tbody tr {
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s ease;
+}
+
+.products-table tbody tr:hover {
+    background-color: #fff;
+}
+
+/* Ensure links in table don't interfere with row click */
+.products-table tbody tr td {
+    position: relative;
+    z-index: 1;
+}
+
+/* For responsive card view */
+@media (max-width: 767px) {
+    .products-table tbody tr.card {
+        cursor: pointer;
     }
 
-    .product-meta {
-      flex-direction: column;
-      gap: var(--spacing-sm);
+    .products-table tbody tr.card:hover {
+        background-color: rgba(0, 0, 0, 0.05);
     }
 
-    .info-grid {
-      grid-template-columns: 1fr;
+    /* Ensure all content in responsive card is clickable */
+    .products-table tbody tr.card .card-body {
+        position: relative;
+        z-index: 1;
     }
+}
 
-    .product-actions {
-      flex-direction: column;
-      gap: var(--spacing-md);
-    }
+/* Style for elements that should not trigger row click */
+.no-row-click {
+    position: relative;
+    z-index: 2;
+}
 
-    .navigation-buttons {
-      width: 100%;
-      justify-content: space-between;
-    }
+/* Style for the row with links */
+.products-table tr a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
 
-    .efficiency-table {
-      font-size: var(--font-xs);
-    }
+/* Script to make rows clickable */
 
-    .efficiency-table th,
-    .efficiency-table td {
-      padding: var(--spacing-xs) var(--spacing-sm);
-    }
-  }
+.innerproducts-table.table-card-responsive td:nth-of-type(1):before {
+    display: none;
+}
+
+.innerproducts-table.table-card-responsive td:nth-of-type(2):before {
+    display: none;
+}
+
+.innerproducts-table.table-card-responsive tr {
+    margin-bottom: inherit;
+    border: inherit;
+    border-radius: inherit;
+    padding: inherit;
+    box-shadow: inherit;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.innerproducts-table.table-card-responsive td {
+    padding: 10px 15px;
+    border-bottom: revert;
+}
+
+.innerproducts-table.table-card-responsive td:nth-child(1) {
+    padding-bottom: 0;
+}
+
+.innerproducts-table.table-card-responsive tr:hover {
+    transform: inherit
+}

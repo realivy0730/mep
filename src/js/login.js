@@ -1,76 +1,66 @@
-// 登入頁面專用 JavaScript
-document.addEventListener('DOMContentLoaded', function () {
-    // 切換密碼顯示/隱藏
-    const togglePassword = document.querySelector('.toggle-password');
-    const passwordInput = document.getElementById('password');
+const switchTabs = document.querySelectorAll('.switch-tab');
+const slider = document.querySelector('.slider');
 
-    if (togglePassword && passwordInput) {
-        togglePassword.addEventListener('click', function () {
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-            this.querySelector('i').classList.toggle('fa-eye');
-            this.querySelector('i').classList.toggle('fa-eye-slash');
+// 設定開關標籤切換功能
+switchTabs.forEach((tab, index) => {
+    tab.addEventListener('click', function () {
+        // 移除所有標籤的活動狀態
+        switchTabs.forEach(t => t.classList.remove('active'));
+
+        // 隱藏所有內容
+        document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
         });
-    }
 
-    // 切換登入和註冊表單的分頁
-    const tabs = document.querySelectorAll('.login-tab');
-    tabs.forEach(tab => {
-        tab.addEventListener('click', function () {
-            tabs.forEach(t => t.classList.remove('active'));
-            this.classList.add('active');
+        // 設置當前標籤為活動狀態
+        this.classList.add('active');
 
-            // 處理分頁切換行為
-            if (this.textContent.includes('註冊')) {
-                // 點擊註冊分頁時的處理
-                window.location.href = 'register.html'; // 可以改成實際的註冊頁面或下載表單的URL
-            }
-        });
+        // 移動滑塊
+        if (index === 0) {
+            slider.style.left = '3px';
+            slider.style.width = '50%';
+        } else {
+            // 針對寬度不同的標籤，調整滑塊寬度
+            slider.style.left = '50%';
+            slider.style.width = '50%';
+        }
+
+        // 顯示對應的內容
+        const tabId = this.getAttribute('data-tab');
+        document.getElementById(tabId + '-tab').classList.add('active');
     });
+});
 
-    // 驗證碼重新產生功能
-    const refreshCaptcha = document.querySelector('.refresh-captcha');
-    const captchaImage = document.querySelector('.captcha-image');
+// 初始化滑塊位置和寬度
+function initializeSlider() {
+    const activeTab = document.querySelector('.switch-tab.active');
+    const index = Array.from(switchTabs).indexOf(activeTab);
 
-    if (refreshCaptcha && captchaImage) {
-        refreshCaptcha.addEventListener('click', function (e) {
-            e.preventDefault();
-            // 在實際應用中，這裡會重新請求後端產生新的驗證碼
-            // 這裡只是模擬更新驗證碼圖片的效果
-            captchaImage.src = 'images/captcha.png?t=' + new Date().getTime();
-        });
+    if (index === 0) {
+        slider.style.left = '3px';
+        slider.style.width = '50%';
+    } else {
+        slider.style.left = '50%';
+        slider.style.width = '50%';
     }
+}
 
-    // 表單提交處理
-    const loginForm = document.getElementById('login-form');
-    if (loginForm) {
-        loginForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const companyId = document.getElementById('company-id').value;
-            const password = document.getElementById('password').value;
-            const captcha = document.getElementById('captcha').value;
+// 頁面加載後初始化滑塊
+window.addEventListener('load', initializeSlider);
+window.addEventListener('resize', initializeSlider);
 
-            // 基本欄位驗證
-            if (!companyId) {
-                alert('請輸入廠商帳號');
-                return;
-            }
+// 密碼顯示/隱藏功能
+document.querySelector('.password-toggle').addEventListener('click', function () {
+    const passwordInput = document.querySelector('input[type="password"]');
+    const icon = this;
 
-            if (!password) {
-                alert('請輸入密碼');
-                return;
-            }
-
-            if (!captcha) {
-                alert('請輸入驗證碼');
-                return;
-            }
-
-            // 實際應用中，這裡會發送登入請求到後端
-            console.log('登入資訊:', { companyId, password, captcha });
-
-            // 模擬登入成功後重定向到首頁或會員中心
-            // window.location.href = 'index.html';
-        });
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+    } else {
+        passwordInput.type = 'password';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
     }
 });
