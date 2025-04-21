@@ -1,0 +1,183 @@
+.inner-content {
+    flex: 1;
+}
+
+.range-selector {
+    display: flex;
+}
+
+.range-selector .select-wrapper {
+    width: 50%;
+}
+
+.range-selector .select-wrapper .dropdown {
+    min-width: inherit
+}
+
+.range-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+.sidebar .btn {
+    margin: 0 auto;
+}
+
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 20px;
+}
+
+/* 日期範圍控制區域 */
+.date-range-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-range-separator {
+
+    color: #333;
+}
+
+.date-input-wrapper {
+    position: relative;
+    width: 150px;
+}
+
+.date-input {
+    width: 100%;
+    padding: 8px 35px 8px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+
+    background-color: white;
+}
+
+.date-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+
+    pointer-events: none;
+}
+
+/* 日期選擇器額外樣式 */
+.date-input-wrapper {
+    position: relative;
+    width: 150px;
+}
+
+.date-input {
+    width: 100%;
+    padding: 8px 35px 8px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.date-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    pointer-events: auto;
+    /* 允許圖標能夠被點擊 */
+}
+
+/* Flatpickr 樣式自定義 */
+.flatpickr-calendar {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+    background: #3a6ea5;
+    border-color: #3a6ea5;
+}
+
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover {
+    background: #2c5782;
+    border-color: #2c5782;
+}
+
+.flatpickr-day.today {
+    border-color: #3a6ea5;
+}
+
+.flatpickr-day.inRange {
+    background: #e6f0fa;
+    border-color: #e6f0fa;
+}
+
+.flatpickr-months .flatpickr-month {
+    background-color: #3a6ea5;
+}
+
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-next-month {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.flatpickr-months .flatpickr-prev-month:hover,
+.flatpickr-months .flatpickr-next-month:hover {
+    color: #fff;
+}
+
+.flatpickr-current-month {
+    color: #fff;
+}
+
+.flatpickr-weekday {
+    color: #3a6ea5;
+}
+
+/* 確保日期選擇器在較小屏幕上正確顯示 */
+@media (max-width: 480px) {
+    .date-input-wrapper {
+        width: 120px;
+    }
+}
+
+
+.products-table table th:nth-child(1) {
+    width: 30%;
+}
+
+.products-table table th:nth-child(2) {
+    width: 40%;
+}
+
+.products-table table td:nth-child(2) {
+    color: #0D6389;
+}
+
+.innerproducts-table td:nth-child(1) {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.innerproducts-table td:nth-child(2) {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0D6389;
+}

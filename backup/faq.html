@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>問與答 - 中華民國能源效率管理系統</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/faq.css" />
+    <!-- 添加 Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="energy-system">
+      <!-- Header 元件佔位符 -->
+      <div id="header-placeholder"></div>
+
+      <!-- Breadcrumb Navigation -->
+      <div class="breadcrumb-container container">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="index.html">首頁</a>
+          </li>
+          <li class="breadcrumb-item active">問與答</li>
+        </ul>
+      </div>
+
+      <!-- Main Content Area -->
+      <main class="main-content container">
+        <div class="content-wrapper">
+          <!-- Sidebar -->
+          <aside class="sidebar">
+            <div class="search-section">
+              <div class="form-line">
+                <h3 class="form-title">搜尋</h3>
+                <div class="search-box">
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    class="search-input"
+                  />
+                  <i class="fas fa-search search-icon"></i>
+                </div>
+              </div>
+
+              <div class="form-line">
+                <h3 class="form-title">發稿分類</h3>
+                <div class="select-wrapper">
+                  <select class="dropdown">
+                    <option>系統公告</option>
+                    <option>一般通知</option>
+                    <option>其他類別</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                </div>
+              </div>
+
+              <button class="btn">確認</button>
+            </div>
+          </aside>
+
+          <!-- Content Area -->
+          <div class="content">
+            <div class="content-header">
+              <div class="content-controls">
+                <span>排序方式</span>
+                <div class="select-wrapper">
+                  <select class="dropdown">
+                    <option>最新公告</option>
+                    <option>最舊公告</option>
+                    <option>依分類</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-table table-container">
+              <table>
+                <thead>
+                  <tr class="header">
+                    <th class="title-header">標題</th>
+                    <th class="category-header">分類</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="./faq_page.html" title="">
+                        113年9月24日
+                        經濟部標準檢驗局公告：修正「廢施檢驗電動機兩品之相關檢驗規定」，並自公告日生效。
+                        <div class="small-font">2024/09/30 09:57</div>
+                      </a>
+                    </td>
+                    <td class="status">
+                      <a href="#" class="status-tag"
+                        >申請作業篇 <i class="fas fa-chevron-right"></i
+                      ></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <a href="./faq_page.html" title="">
+                        通風機容許耗用能源基準、標示事項及檢查方式(113年7月1日生效)
+                        <div class="small-font">2024/07/01 15:30</div>
+                      </a>
+                    </td>
+                    <td class="status">
+                      <a href="#" class="status-tag"
+                        >申請作業篇 <i class="fas fa-chevron-right"></i
+                      ></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <a href="./faq_page.html" title="">
+                        修正「低壓三相籠型感應電動機(含安裝於特定設備之一部者)能源效率基準、效率標示及檢查方式」，並自113年7月1日生效。
+                        <div class="small-font">2024/04/17 08:48</div>
+                      </a>
+                    </td>
+                    <td class="status">
+                      <a href="#" class="status-tag inactive"
+                        >非申請作業篇 <i class="fas fa-chevron-right"></i
+                      ></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <a href="./faq_page.html" title="">
+                        111年1月21日經濟部令：公告修正「指定使用能源設備或器具能源效率標示格式及能源效率規定」，並自公告日生效。
+                        <div class="small-font">2022/01/27 16:09</div>
+                      </a>
+                    </td>
+                    <td class="status">
+                      <a href="#" class="status-tag"
+                        >申請作業篇 <i class="fas fa-chevron-right"></i
+                      ></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <a href="./faq_page.html" title="">
+                        迴轉動力水泵容許耗用能源基準、標示事項及檢查方式(112年1月1日生效)
+                        <div class="small-font">2022/01/27 15:52</div>
+                      </a>
+                    </td>
+                    <td class="status">
+                      <a href="#" class="status-tag"
+                        >申請作業篇 <i class="fas fa-chevron-right"></i
+                      ></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <a href="./faq_page.html" title="">
+                        空氣壓縮機容許耗用能源基準與能源效率分級標示事項、方法及檢查方式(110年1月1日生效)
+                        <div class="small-font">2019/02/18 10:35</div>
+                      </a>
+                    </td>
+                    <td class="status">
+                      <a href="#" class="status-tag"
+                        >申請作業篇 <i class="fas fa-chevron-right"></i
+                      ></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <a href="./faq_page.html" title="">
+                        Announcement for Revisions to Requirements on Minimum
+                        Energy Performance Standards
+                        <div class="small-font">2017/04/18 11:06</div>
+                      </a>
+                    </td>
+                    <td class="status">
+                      <a href="#" class="status-tag"
+                        >申請作業篇 <i class="fas fa-chevron-right"></i
+                      ></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <a href="./faq_page.html" title="">
+                        [現行法規]低壓三相籠型感應電動機(含安裝於特定設備之二部者)能源效率基準、效率標示及檢查方式
+                        <div class="small-font">2014/12/24 12:38</div>
+                      </a>
+                    </td>
+                    <td class="status">
+                      <a href="#" class="status-tag"
+                        >申請作業篇 <i class="fas fa-chevron-right"></i
+                      ></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="items-per-page">
+                <span>每頁顯示</span>
+                <div class="select-wrapper">
+                  <select class="dropdown">
+                    <option>8</option>
+                    <option>16</option>
+                    <option>24</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                </div>
+              </div>
+
+              <!-- Pagination -->
+              <div class="pagination">
+                <div class="pagination-controls">
+                  <button class="pagination-btn first-page">
+                    <i class="fas fa-angle-double-left"></i>
+                  </button>
+                  <button class="pagination-btn prev-page">
+                    <i class="fas fa-angle-left"></i>
+                  </button>
+                  <div class="page-numbers">
+                    <button class="page-number active">1</button>
+                    <button class="page-number">2</button>
+                    <button class="page-number">3</button>
+                    <span class="page-ellipsis">...</span>
+                    <button class="page-number">10</button>
+                  </div>
+                  <button class="pagination-btn next-page">
+                    <i class="fas fa-angle-right"></i>
+                  </button>
+                  <button class="pagination-btn last-page">
+                    <i class="fas fa-angle-double-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer 元件佔位符 -->
+      <div id="footer-placeholder"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <!-- 引入 Header 元件的 JavaScript -->
+    <script src="js/header.js"></script>
+    <!-- 引入 Footer 元件的 JavaScript -->
+    <script src="js/footer.js"></script>
+
+    <!-- FAQ 頁面專用 JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 問答切換功能
+        const toggleButtons = document.querySelectorAll(".toggle-answer");
+
+        toggleButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const faqItem = this.closest(".faq-item");
+            const answer = faqItem.querySelector(".faq-answer");
+            const icon = this.querySelector("i");
+
+            // 切換顯示/隱藏回答
+            if (answer.style.display === "block") {
+              answer.style.display = "none";
+              icon.classList.remove("fa-chevron-up");
+              icon.classList.add("fa-chevron-down");
+            } else {
+              answer.style.display = "block";
+              icon.classList.remove("fa-chevron-down");
+              icon.classList.add("fa-chevron-up");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
