@@ -33,7 +33,7 @@
     margin-bottom: 20px;
     flex-wrap: wrap;
     gap: 15px;
-    font-size: 20px;
+    font-size: var(--font-lg);
 }
 
 /* 日期範圍控制區域 */
@@ -263,4 +263,15 @@
 
 .innerproducts-table.table-card-responsive tr:hover {
     transform: inherit
+}
+
+@media (max-width: 576px) {
+
+    .content-header {
+        font-size: 13px;
+    }
+
+    .date-range-controls {
+        gap: 5px;
+    }
 }
