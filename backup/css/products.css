@@ -181,3 +181,15 @@
     font-weight: 700;
     color: #0D6389;
 }
+
+
+@media (max-width: 576px) {
+
+    .content-header {
+        font-size: 13px;
+    }
+
+    .date-range-controls {
+        gap: 5px;
+    }
+}
