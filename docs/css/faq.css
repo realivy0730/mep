@@ -1,0 +1,26 @@
+.sidebar .btn {
+    margin: 80px auto 0;
+}
+
+.content-header {
+    justify-content: end;
+}
+
+.faq-table table th:nth-child(1) {
+    width: 70%;
+}
+
+
+@media (max-width: 990px) {
+    .sidebar .btn {
+        margin: 20px auto 0;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .faq-table.table-card-responsive td {
+        padding-left: 20%;
+    }
+}

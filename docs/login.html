@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登入/註冊 - 中華民國能源效率管理系統</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <!-- 添加 Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="energy-system">
+      <!-- Header 元件佔位符 -->
+      <div id="header-placeholder"></div>
+
+      <!-- Breadcrumb Navigation -->
+      <div class="breadcrumb-container container">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="index.html">首頁</a>
+          </li>
+          <li class="breadcrumb-item active">登入/註冊</li>
+        </ul>
+      </div>
+
+      <!-- Main Content Area -->
+      <main class="main-content container">
+        <div class="login-container">
+          <!-- 開關式標籤 -->
+          <div class="switch-tabs">
+            <div class="slider"></div>
+            <div class="switch-tab active" data-tab="login">廠商登入</div>
+            <div class="switch-tab" data-tab="register">
+              廠商註冊/下載申請表
+            </div>
+          </div>
+
+          <!-- 登入表單 -->
+          <div id="login-tab" class="tab-content active">
+            <div class="login-form">
+              <div class="form-group">
+                <label class="form-label">廠商帳號</label>
+                <div class="input-container">
+                  <i class="fas fa-user input-icon"></i>
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="輸入帳號"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">密碼</label>
+                <div class="input-container password-input-container">
+                  <i class="fas fa-lock input-icon"></i>
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="輸入密碼"
+                  />
+                  <i class="fas fa-eye-slash password-toggle"></i>
+                </div>
+                <div class="password-note">請注意大小寫</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">驗證碼</label>
+                <div class="captcha-container">
+                  <div class="input-container captcha-input">
+                    <input
+                      type="text"
+                      class="form-input"
+                      placeholder="輸入驗證碼"
+                    />
+                  </div>
+                  <img
+                    src="../images/temp_code.png"
+                    alt="驗證碼"
+                    class="captcha-image"
+                  />
+                </div>
+                <a href="#" class="captcha-refresh">重新發送</a>
+              </div>
+
+              <button class="btn">登入</button>
+              <a href="#" class="forgot-password">忘記密碼</a>
+            </div>
+          </div>
+
+          <!-- 註冊表單 -->
+          <div id="register-tab" class="tab-content">
+            <div class="inner-content">
+              <div class="inner-detail">
+                <div class="inner-content-body">
+                  <p>
+                    廠商製造或進口<strong>「低壓三相鼠籠型感應電動機」、「空氣壓縮機」、「迴轉動力水泵」、「通風機」</strong>者，應檢具下列文件向經濟部能源署申請「容許耗用能源基準管理系統」(即「中華民國能源效率管理系統」，以下簡稱「管理系統」)之登錄帳號及密碼，供登入管理系統使用：
+                  </p>
+
+                  <h2>申請管理系統使用權限，應檢具之文件：</h2>
+                  <div class="box">
+                    <ol class="related-regulations">
+                      <li>
+                        <a href="#"
+                          >低壓三相鼠籠型感應電動機(含安裝於特定機械之一部者)能源效率基準、效率標示及檢查方式</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          >指定使用能源設備或器具能源效率標準及檢查效率方式</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#">商品檢驗法</a>
+                      </li>
+                    </ol>
+                  </div>
+
+                  <h2>其他說明事項：</h2>
+                  <ol class="related-regulations">
+                    <li>
+                      申請不同產品類別時，應分開填寫申請表。(例如：申請通風機帳密填1張、申請馬達帳密另填1張。)
+                    </li>
+                    <li>帳號及密碼申請表，請務必加蓋廠商及負責人印鑑。</li>
+                    <li>每一家廠商，原則開放2組帳號密碼為限。</li>
+                    <li>
+                      同次申請2組帳密，可填同一張申請表；如已持有1組帳密，後續要申請第2組，請重新填申請表。
+                    </li>
+                    <li>登入帳號、密碼最長設定為15碼。</li>
+                    <li>【密碼】建議設定8碼以上的英文、數字、符號混合密碼。</li>
+                  </ol>
+
+                  <div class="info-section">
+                    以上應檢具之文件，請以「掛號」郵寄至本專案辦公室<br />
+                    收件地址：310新竹縣竹東鎮中興路四段195號22館241-B室<br />
+                    收件人：能源效率MEPS專案辦公室
+                  </div>
+
+                  <h2>相關檔案：</h2>
+                  <div
+                    class="download-table table-container table-card-responsive"
+                  >
+                    <table>
+                      <thead>
+                        <tr class="header">
+                          <th class="title-header">標題</th>
+                          <th class="category-header">分類</th>
+                          <th class="download">下載</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <a href="#" class="attachment-link"
+                              >MEPS系統帳號密碼申請須知及範例</a
+                            >
+                          </td>
+                          <td>pdf</td>
+                          <td class="status">
+                            <a href="#"
+                              ><img src="images/icons/pdf.svg" alt="pdf"
+                            /></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="#" class="attachment-link"
+                              >帳號申請表(低壓三相鼠籠型感應電動機)</a
+                            >
+                          </td>
+                          <td>docx</td>
+                          <td class="status">
+                            <a href="#"
+                              ><img src="images/icons/docx.svg" alt="docx"
+                            /></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="#" class="attachment-link"
+                              >應施檢驗電動機商品之相關檢驗規定.pdf</a
+                            >
+                          </td>
+                          <td>pdf</td>
+                          <td class="status">
+                            <a href="#"
+                              ><img src="images/icons/docx.svg" alt="docx"
+                            /></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="#" class="attachment-link"
+                              >應施檢驗電動機商品之相關檢驗規定.pdf</a
+                            >
+                          </td>
+                          <td>pdf</td>
+                          <td class="status">
+                            <a href="#"
+                              ><img src="images/icons/docx.svg" alt="docx"
+                            /></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="#" class="attachment-link"
+                              >應施檢驗電動機商品之相關檢驗規定.pdf</a
+                            >
+                          </td>
+                          <td>pdf</td>
+                          <td class="status">
+                            <a href="#"
+                              ><img src="images/icons/docx.svg" alt="docx"
+                            /></a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer 元件佔位符 -->
+      <div id="footer-placeholder"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <!-- 引入 Header 元件的 JavaScript -->
+    <script src="js/header.js"></script>
+    <!-- 引入 Footer 元件的 JavaScript -->
+    <script src="js/footer.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

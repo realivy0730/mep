@@ -1,0 +1,121 @@
+.sidebar .btn {
+    margin: 80px auto 0;
+}
+
+.content-header {
+    justify-content: end;
+}
+
+
+
+/* Announcements Table Styles */
+
+
+.announcements-table table th:nth-child(1) {
+    width: 70%;
+}
+
+
+.announcement-action {
+    width: 50px;
+    text-align: center;
+}
+
+.action-button {
+    color: var(--secondary-color);
+    font-size: var(--font-sm);
+}
+
+
+.attachment-section {
+    background-color: var(--bg-light);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.attachment-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.attachment-item i {
+    color: var(--secondary-color);
+    margin-right: var(--spacing-sm);
+    font-size: var(--font-lg);
+}
+
+.attachment-link {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    margin-right: var(--spacing-xs);
+}
+
+.attachment-size {
+    color: var(--text-light);
+    font-size: var(--font-xs);
+}
+
+.related-regulations {
+    list-style-type: disc;
+    margin-left: var(--spacing-lg);
+}
+
+.related-regulations li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.related-regulations a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.contact-info-section {
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    margin-top: var(--spacing-lg);
+}
+
+.contact-info-section p {
+    margin-bottom: var(--spacing-xs);
+}
+
+.contact-info-section i {
+    color: var(--secondary-color);
+    margin-right: var(--spacing-sm);
+    width: 16px;
+    text-align: center;
+}
+
+
+.download-table {
+    width: 60%;
+}
+
+.download-table td:nth-child(2) {
+    text-align: center;
+}
+
+
+@media (max-width: 990px) {
+    .sidebar .btn {
+        margin: 20px auto 0;
+    }
+
+    .download-table {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .prev-btn {
+        max-width: 100%;
+    }
+
+    .announcements-table.table-card-responsive td {
+        padding-left: 20%;
+    }
+}

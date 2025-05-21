@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>資料下載 - 中華民國能源效率管理系統</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/downloads.css" />
+    <!-- 添加 Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="energy-system">
+      <!-- Header 元件佔位符 -->
+      <div id="header-placeholder"></div>
+
+      <!-- Breadcrumb Navigation -->
+      <div class="breadcrumb-container container">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="index.html">首頁</a>
+          </li>
+          <li class="breadcrumb-item active">資料下載</li>
+        </ul>
+      </div>
+
+      <!-- Main Content Area -->
+      <main class="main-content container">
+        <div class="content-wrapper">
+          <!-- Content Area -->
+          <div class="inner-content">
+            <div class="inner-detail">
+              <div class="inner-header">
+                <h1>
+                  為促進容許耗用能源效率資訊之公開透明、並配合政府提升創新研發與服務以擴大知識產業之目標，能源署開放政府資料（Open
+                  Data）之服務網頁，提供容許耗用能源效率資訊相關之資料集（Dataset）供下載使用。
+                </h1>
+              </div>
+
+              <div class="inner-content-body">
+                本網站所提供之資料集編碼格式為 UTF-8。若使用 Microsoft
+                EXCEL軟體開啟CSV檔案時，會出現中文無法正確顯示，其因為EXCEL軟體預設檔案編碼設定為ANSI
+                編碼，故會出現亂碼情況。<br />
+                若您嘗試使用EXCEL
+                軟體開啟CSV檔案請參閱下列兩個方法解決CSV開啟為亂碼的問題。
+
+                <ol class="block-list">
+                  <li>以記事本開啟後儲存，再以Excel開啟即可正常顯示。</li>
+                  <li>
+                    開啟Excel軟體，新增空白活頁簿，然後在上方功能選項中點選「資料」->「取得外部資料」->「從文字檔」→「選擇csv文件」，並以逗號分隔，即可正常顯示。
+                  </li>
+                </ol>
+
+                <div class="download-table table-container">
+                  <table>
+                    <thead>
+                      <tr class="header">
+                        <th>名稱</th>
+                        <th>內容</th>
+                        <th>資料集類型</th>
+                        <th>格式</th>
+                        <th>下載</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>低壓三相鼠籠型感應電動機</td>
+                        <td>
+                          產品能源效率相關資訊：標示義務公司、登錄編號、產品型號、額定效率(滿載時之效率)、效率等級、最低能源效率基準、IP碼
+                        </td>
+                        <td>Raw Data</td>
+                        <td>CSV</td>
+                        <td class="status">
+                          <a href="#"
+                            ><img src="images/icons/CSV.svg" alt="csv"
+                          /></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- <div class="info-section">
+                        <p>
+                            最後更新 2024/04/20 12:47</a>
+                        </p>
+                    </div> -->
+            </div>
+            <!-- <div class="button-group">
+                    <a href="faq.html" class="btn2 list-btn">
+                        <i class="icon iconback"></i> 回上一頁
+                    </a>
+                    <a href="#" class="btn  prev-btn">
+                        <i class="icon iconprinter"></i> 友善列印
+                    </a>
+                </div> -->
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer 元件佔位符 -->
+      <div id="footer-placeholder"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <!-- 引入 Header 元件的 JavaScript -->
+    <script src="js/header.js"></script>
+    <!-- 引入 Footer 元件的 JavaScript -->
+    <script src="js/footer.js"></script>
+  </body>
+</html>

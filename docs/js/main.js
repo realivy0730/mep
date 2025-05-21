@@ -28,7 +28,7 @@ function setActiveNavItem() {
     activeNavId = 'nav-home';
   } else if (currentPage.includes('announcements')) {
     activeNavId = 'nav-announcements';
-  } else if (currentPage.includes('products')) {
+  } else if (currentPage.includes('products') || currentPage.includes('product_page')) {
     activeNavId = 'nav-products';
   } else if (currentPage.includes('faq')) {
     activeNavId = 'nav-faq';

@@ -1,0 +1,191 @@
+/* 廠商註冊下載申請表頁面專用樣式 */
+.register-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  .register-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #f0f8ff;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+  }
+
+  .register-tab {
+    flex: 1;
+    text-align: center;
+    padding: 12px 0;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    background-color: #e6f2ff;
+    transition: background-color 0.3s;
+  }
+
+  .register-tab.active {
+    background-color: #1e63c4;
+    color: white;
+  }
+
+  .register-content {
+    background-color: #f9f9f9;
+    border-radius: 0 0 8px 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .register-description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  .register-description p {
+    text-align: justify;
+  }
+
+  .register-requirements,
+  .register-notes,
+  .register-submission {
+    margin-bottom: 30px;
+  }
+
+  .register-requirements h3,
+  .register-notes h3,
+  .register-submission h3,
+  .register-downloads h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #1e63c4;
+    font-weight: bold;
+  }
+
+  .register-requirements ol,
+  .register-notes ol {
+    padding-left: 25px;
+    margin-bottom: 15px;
+  }
+
+  .register-requirements li,
+  .register-notes li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  .register-requirements a {
+    color: #1e63c4;
+    text-decoration: none;
+    word-break: break-all;
+  }
+
+  .register-requirements a:hover {
+    text-decoration: underline;
+  }
+
+  .register-submission h3 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+
+  .register-submission p {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .download-table {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .download-header {
+    display: flex;
+    background-color: #1e63c4;
+    color: white;
+    font-weight: bold;
+    padding: 12px 15px;
+  }
+
+  .download-name {
+    flex: 3;
+  }
+
+  .download-format {
+    flex: 1;
+    text-align: center;
+  }
+
+  .download-action {
+    flex: 1;
+    text-align: center;
+  }
+
+  .download-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-top: 1px solid #ddd;
+  }
+
+  .download-item:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+
+  .download-btn {
+    display: inline-block;
+    font-size: 22px;
+    color: #666;
+    transition: color 0.3s;
+  }
+
+  .download-btn.pdf-btn {
+    color: #e74c3c;
+  }
+
+  .download-btn.word-btn {
+    color: #3498db;
+  }
+
+  .download-btn:hover {
+    opacity: 0.8;
+  }
+
+  /* 強調標記 */
+  strong {
+    font-weight: bold;
+    color: #c0392b;
+  }
+
+  /* 響應式設計 */
+  @media (max-width: 768px) {
+    .register-content {
+      padding: 15px;
+    }
+
+    .download-header, .download-item {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .register-tabs {
+      flex-direction: column;
+    }
+
+    .download-header, .download-item {
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .download-format, .download-action {
+      margin-top: 5px;
+      text-align: left;
+    }
+
+    .download-action {
+      margin-top: 10px;
+    }
+  }

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>產品資料 - 中華民國能源效率管理系統</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- 添加 Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="energy-system">
+        <!-- Header 元件佔位符 -->
+        <div id="header-placeholder"></div>
+
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb-container container">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="index.html">首頁</a>
+                </li>
+                <li class="breadcrumb-item active">公告與法令</li>
+            </ul>
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="main-content container">
+            <div class="content-wrapper">
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="search-section">
+                        <div class="form-line">
+                            <h3 class="form-title">搜尋</h3>
+                            <div class="search-box">
+                                <input type="text" placeholder="Search" class="search-input" />
+                                <i class="fas fa-search search-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-line">
+                            <h3 class="form-title">登錄編號</h3>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="EN-114-000130" class="form-input" />
+                            </div>
+                        </div>
+
+                        <div class="form-line">
+                            <h3 class="form-title">標示義務公司</h3>
+                            <div class="select-wrapper">
+                                <select class="dropdown">
+                                    <option>標示義務公司</option>
+                                    <option>其他公司</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-line">
+
+                            <h3 class="form-title">產品狀態</h3>
+                            <div class="select-wrapper">
+                                <select class="dropdown">
+                                    <option>已登錄</option>
+                                    <option>未登錄</option>
+                                    <option>審核中</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                            </div>
+                       </div>
+
+                       <div class="form-line">
+                            <h3 class="form-title">產品類別</h3>
+                            <div class="select-wrapper">
+                                <select class="dropdown">
+                                    <option>全部</option>
+                                    <option>電器</option>
+                                    <option>機械</option>
+                                    <option>其他</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-line">
+                            <h3 class="form-title">效率等級</h3>
+                                <div class="select-wrapper">
+                                    <select class="dropdown">
+                                        <option>IE4</option>
+                                        <option>IE3</option>
+                                        <option>IE2</option>
+                                        <option>IE1</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                                </div>
+                        </div>
+
+
+                        <div class="form-line">
+                            <h3 class="form-title">功率</h3>
+                            <div class="range-selector">
+                                <div class="select-wrapper range-min">
+                                    <select class="dropdown">
+                                        <option>1</option>
+                                        <option>5</option>
+                                        <option>10</option>
+                                        <option>50</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                                </div>
+                                <span class="range-separator">-</span>
+                                <div class="select-wrapper range-max">
+                                    <select class="dropdown">
+                                        <option>10000</option>
+                                        <option>5000</option>
+                                        <option>1000</option>
+                                        <option>500</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn">查詢</button>
+                    </div>
+                </aside>
+
+                <!-- Content Area -->
+                <div class="content">
+                    <div class="content-header">
+                        <div class="date-range-controls">
+                            <span>登錄備查區間</span>
+                            <span class="date-range-separator">至</span>
+                            <div class="date-input-wrapper">
+                                <input type="text" placeholder="年/月/日" class="date-input date-start" readonly />
+                                <i class="fa-regular fa-calendar date-icon"></i>
+                            </div>
+                            <span class="date-range-separator">到</span>
+                            <div class="date-input-wrapper">
+                                <input type="text" placeholder="年/月/日" class="date-input date-end" readonly />
+                                <i class="fa-regular fa-calendar date-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="content-controls">
+                            <span>排序方式</span>
+                            <div class="select-wrapper">
+                                <select class="dropdown">
+                                    <option>最新登錄</option>
+                                    <option>舊到新</option>
+                                    <option>產品型號（A-Z)</option>
+                                    <option>產品型號（Z-A)</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="products-table table-container">
+                        <table>
+                            <thead>
+                                <tr class="header">
+                                    <th>產品類別與編號</th>
+                                    <th>產品型號</th>
+                                    <th>標示義務公司</th>
+                                    <th>效率等級</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="./product_page.html" title="">
+                                            低壓三相鼠籠型感應電動機
+                                            <div class="small-font">EN-114-000100</div>
+                                        </a>
+                                    </td>
+                                    <td>保護型2極15kW，臥式：FS0202C；立式：FS0202E；立臥式：FS0202F</td>
+                                    <td>久朝企業有限公司</td>
+                                    <td class="status">
+                                        <a href="#" class="status-tag">IE4 <i class="fas fa-chevron-right"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <a href="./product_page.html" title="">
+                                            低壓三相鼠籠型感應電動機
+                                            <div class="small-font">EN-114-000100</div>
+                                        </a>
+                                    </td>
+                                    <td>保護型2極15kW，臥式：FS0202C；立式：FS0202E；立臥式：FS0202F</td>
+                                    <td>久朝企業有限公司</td>
+                                    <td class="status">
+                                        <a href="#" class="status-tag">IE4 <i class="fas fa-chevron-right"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <a href="./product_page.html" title="">
+                                            低壓三相鼠籠型感應電動機
+                                            <div class="small-font">EN-114-000100</div>
+                                        </a>
+                                    </td>
+                                    <td>保護型2極15kW，臥式：FS0202C；立式：FS0202E；立臥式：FS0202F</td>
+                                    <td>久朝企業有限公司</td>
+                                    <td class="status">
+                                        <a href="#" class="status-tag">IE4 <i class="fas fa-chevron-right"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="items-per-page">
+                            <span>項目</span>
+                            <div class="select-wrapper">
+                                <select class="dropdown">
+                                    <option>10</option>
+                                    <option>20</option>
+                                    <option>30</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                            </div>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="pagination">
+                            <div class="pagination-controls">
+                                <button class="pagination-btn first-page">
+                                    <i class="fas fa-angle-double-left"></i>
+                                </button>
+                                <button class="pagination-btn prev-page">
+                                    <i class="fas fa-angle-left"></i>
+                                </button>
+                                <div class="page-numbers">
+                                    <button class="page-number active">1</button>
+                                    <button class="page-number">2</button>
+                                    <button class="page-number">3</button>
+                                    <span class="page-ellipsis">...</span>
+                                    <button class="page-number">10</button>
+                                </div>
+                                <button class="pagination-btn next-page">
+                                    <i class="fas fa-angle-right"></i>
+                                </button>
+                                <button class="pagination-btn last-page">
+                                    <i class="fas fa-angle-double-right"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </main>
+
+        <!-- Footer 元件佔位符 -->
+        <div id="footer-placeholder"></div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/zh-tw.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <!-- 引入 Header 元件的 JavaScript -->
+    <script src="js/header.js"></script>
+    <!-- 引入 Footer 元件的 JavaScript -->
+    <script src="js/footer.js"></script>
+</body>
+
+</html>

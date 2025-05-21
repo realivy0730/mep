@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登入/註冊 - 中華民國能源效率管理系統</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <!-- 添加 Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="energy-system">
+      <!-- Header 元件佔位符 -->
+      <div id="header-placeholder"></div>
+
+      <!-- Breadcrumb Navigation -->
+      <div class="breadcrumb-container container">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="index.html">首頁</a>
+          </li>
+          <li class="breadcrumb-item active">登入/註冊</li>
+        </ul>
+      </div>
+
+      <!-- Main Content Area -->
+      <main class="main-content container">
+        <div class="login-container">
+          <!-- 開關式標籤 -->
+          <div class="switch-tabs">
+            <div class="slider"></div>
+            <div class="switch-tab active" data-tab="login">廠商登入</div>
+            <div class="switch-tab" data-tab="register">
+              廠商註冊/下載申請表
+            </div>
+          </div>
+
+          <!-- 登入表單 -->
+          <div id="login-tab" class="tab-content active">
+            <div class="login-form">
+              <div class="form-group">
+                <label class="form-label">廠商帳號</label>
+                <div class="input-container">
+                  <i class="fas fa-user input-icon"></i>
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="輸入帳號"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">密碼</label>
+                <div class="input-container password-input-container">
+                  <i class="fas fa-lock input-icon"></i>
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="輸入密碼"
+                  />
+                  <i class="fas fa-eye-slash password-toggle"></i>
+                </div>
+                <div class="password-note">請注意大小寫</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">驗證碼</label>
+                <div class="captcha-container">
+                  <div class="input-container captcha-input">
+                    <input
+                      type="text"
+                      class="form-input"
+                      placeholder="輸入驗證碼"
+                    />
+                  </div>
+                  <img
+                    src="https://via.placeholder.com/120x45/2148A6/FFFFFF/?text=61822"
+                    alt="驗證碼"
+                    class="captcha-image"
+                  />
+                </div>
+                <a href="#" class="captcha-refresh">重新選擇</a>
+              </div>
+
+              <button class="login-button">登入</button>
+              <a href="#" class="forgot-password">忘記密碼</a>
+            </div>
+          </div>
+
+          <!-- 註冊表單 -->
+          <div id="register-tab" class="tab-content">
+            <div class="content-wrapper">
+                <!-- Content Area -->
+                <div class="inner-content">
+                    <div class="inner-detail">
+                        <div class="inner-header">
+                            <h1>
+                                113年9月24日
+                                經濟部標準檢驗局公告：修正「應施檢驗電動機商品之相關檢驗規定」，並自113年10月1日生效
+                            </h1>
+                        </div>
+
+                        <div class="inner-content-body">
+                            <p>
+                                歐盟已率先於112年7月實施75kW以上電動機IE4效率基準，美國亦預定於116年6月實施75kW以上電動機IE4效率基準，我國也即將與國際接軌，自114年7月1日起，75kW以上電動機最低能源效率基準將提升到IE4。
+                            </p>
+
+                            <h2>相關連結：</h2>
+                            <ul class="related-regulations">
+                                <li>
+                                    <a href="#">低壓三相鼠籠型感應電動機(含安裝於特定機械之一部者)能源效率基準、效率標示及檢查方式</a>
+                                </li>
+                                <li>
+                                    <a href="#">指定使用能源設備或器具能源效率標準及檢查效率方式</a>
+                                </li>
+                                <li>
+                                    <a href="#">商品檢驗法</a>
+                                </li>
+                            </ul>
+                            <h2>相關檔案：</h2>
+                            <div class="download-table table-container">
+                                <table>
+                                    <thead>
+                                        <tr class="header">
+                                            <th class="title-header">標題</th>
+                                            <th class="category-header">分類</th>
+                                            <th class="download">下載</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="#" class="attachment-link">應施檢驗電動機商品之相關檢驗規定.pdf</a>
+                                            </td>
+                                            <td>pdf</td>
+                                            <td class="status">
+                                                <a href="#"><img src="images/icons/pdf.svg" alt="pdf"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h2>公告細節：</h2>
+                            <div class="info-section">
+                                <p>
+                                    消息來源 <a href="#" class="attachment-link" title="經濟部能源局">經濟部能源局</a>
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="info-section">
+                            <p>
+                                最後更新 2024/04/20 12:47</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <a href="announcements.html" class="btn2 list-btn">
+                            <i class="icon iconback"></i> 回上一頁
+                        </a>
+                        <a href="#" class="btn  prev-btn">
+                            <i class="icon iconprinter"></i> 友善列印
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer 元件佔位符 -->
+      <div id="footer-placeholder"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <!-- 引入 Header 元件的 JavaScript -->
+    <script src="js/header.js"></script>
+    <!-- 引入 Footer 元件的 JavaScript -->
+    <script src="js/footer.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>
