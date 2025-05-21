@@ -17,3 +17,10 @@
 .download-table table td:nth-child(5) {
     text-align: center;
 }
+
+@media (max-width: 576px) {
+
+    .inner-content {
+        padding: 5%;
+    }
+}

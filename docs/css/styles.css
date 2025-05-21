@@ -1749,6 +1749,12 @@ button {
         font-size: 16px;
     }
 
+    .mobile-nav-link span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     /* 內容區域調整 */
     .content-header {
         flex-direction: column;
@@ -2060,6 +2066,11 @@ button {
 
     .inner-content {
         padding: 0;
+    }
+
+    .icon.icon-phone {
+        width: 16px;
+        height: 16px;
     }
 }
 
