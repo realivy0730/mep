@@ -1736,6 +1736,16 @@ button {
 
 /* 手機尺寸 - 768px */
 @media (max-width: 768px) {
+
+    .inner-header {
+
+        padding-bottom: var(--spacing-sm);
+    }
+
+    .inner-header h1 {
+        margin-bottom: var(--spacing-sm);
+    }
+
     /* 更小螢幕的樣式調整 */
 
     .icon.icon-phone {
@@ -2068,7 +2078,7 @@ button {
     }
 
     .inner-content {
-        padding: 0;
+        padding: 5%;
     }
 
 

@@ -33,7 +33,7 @@
     margin-bottom: 20px;
     flex-wrap: wrap;
     gap: 15px;
-    font-size: 20px;
+    font-size: var(--font-lg);
 }
 
 /* 日期範圍控制區域 */
@@ -172,20 +172,14 @@
 }
 
 .innerproducts-table td:nth-child(1) {
-    font-size: 16px;
+    font-size: var(--font-base);
     font-weight: 700;
 }
 
 .innerproducts-table td:nth-child(2) {
-    font-size: 20px;
+    font-size: var(--font-lg);
     font-weight: 700;
     color: #0D6389;
-}
-
-@media (max-width: 1440px) {
-    .content-header {
-        font-size: 16px;
-    }
 }
 
 @media (max-width: 576px) {
