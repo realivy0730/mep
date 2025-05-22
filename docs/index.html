@@ -14,6 +14,8 @@
     />
     <link rel="stylesheet" href="js/libs/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <!-- 引入 Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="energy-system">
@@ -114,21 +116,18 @@
             <!-- 統計圖表輪播 -->
             <div class="stats-swiper swiper">
               <ul class="swiper-wrapper">
-                <!-- 第一頁輪播 (2張卡片) -->
                 <li class="swiper-slide">
                   <div class="stats-cards">
                     <div class="stats-card box">
                       <h3>能源使用效率統計</h3>
                       <div class="chart-container">
-                        <!-- 這裡放置圖表 1 -->
-                        <img src="images/chart-placeholder-1.png" alt="能源使用效率統計圖表">
+                        <canvas id="efficiencyChart"></canvas>
                       </div>
                     </div>
                     <div class="stats-card box">
                       <h3>節能產品市佔率</h3>
                       <div class="chart-container">
-                        <!-- 這裡放置圖表 2 -->
-                        <img src="images/chart-placeholder-2.png" alt="節能產品市佔率圖表">
+                        <canvas id="marketShareChart"></canvas>
                       </div>
                     </div>
                   </div>
@@ -140,15 +139,13 @@
                     <div class="stats-card box">
                       <h3>年度能源節省量</h3>
                       <div class="chart-container">
-                        <!-- 這裡放置圖表 3 -->
-                        <img src="images/chart-placeholder-3.png" alt="年度能源節省量圖表">
+                        <canvas id="energySavingChart"></canvas>
                       </div>
                     </div>
                     <div class="stats-card box">
                       <h3>各類產品效率比較</h3>
                       <div class="chart-container">
-                        <!-- 這裡放置圖表 4 -->
-                        <img src="images/chart-placeholder-4.png" alt="各類產品效率比較圖表">
+                        <canvas id="productComparisonChart"></canvas>
                       </div>
                     </div>
                   </div>
@@ -160,15 +157,13 @@
                     <div class="stats-card box">
                       <h3>碳排放減少量</h3>
                       <div class="chart-container">
-                        <!-- 這裡放置圖表 5 -->
-                        <img src="images/chart-placeholder-5.png" alt="碳排放減少量圖表">
+                        <canvas id="carbonReductionChart"></canvas>
                       </div>
                     </div>
                     <div class="stats-card box">
                       <h3>能源標章申請數量</h3>
                       <div class="chart-container">
-                        <!-- 這裡放置圖表 6 -->
-                        <img src="images/chart-placeholder-6.png" alt="能源標章申請數量圖表">
+                        <canvas id="labelApplicationChart"></canvas>
                       </div>
                     </div>
                   </div>
