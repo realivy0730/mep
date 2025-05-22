@@ -1,0 +1,215 @@
+/*---------swiper--------------*/
+.swiper_box {
+    line-height: 0;
+}
+
+.swiper .slider_controls {
+    position: relative;
+    z-index: 12;
+    height: 36px;
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.swiper .slider_controls .swiper_slide-active,
+.swiper .slider_controls .swiper_slide-prev,
+.swiper .slider_controls .swiper_slide-next {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.swiper .slider_controls .slider_pagination {
+    text-align: center;
+}
+
+.swiper .slider_controls .slider_pagination .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    background: #000;
+    opacity: 0.2;
+    margin: 0 5px;
+    border-radius: 20px;
+    transition: opacity 0.5s, background-color 0.5s, width 0.5s;
+    transition-delay: 0.5s, 0.5s, 0s;
+}
+
+.swiper .slider_controls ..swiper_pagination-clickable .swiper-pagination-bullet {
+    cursor: pointer;
+}
+
+.swiper .slider_controls .slider_pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: var(--primary-color);
+    width: 40px;
+    transition-delay: 0s;
+}
+
+.swiper .slider_controls .slider_button-next,
+.swiper .slider_controls .slider_button-prev {
+    position: absolute;
+    top: 50%;
+    width: 36px;
+    height: 36px;
+    margin-top: -18px;
+    z-index: 10;
+    cursor: pointer;
+    background-size: 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+}
+
+.swiper .slider_controls .slider_button-prev {
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")no-repeat center/30%, linear-gradient(90deg, #D93D59 0%, #E87373 100%);
+    left: 10px;
+    right: auto;
+}
+
+.swiper .slider_controls .slider_button-next {
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")no-repeat center/30%, linear-gradient(90deg, #D93D59 0%, #E87373 100%);
+    right: 10px;
+    left: auto;
+}
+
+.section_home_links {
+    padding: 64px 0
+}
+
+.section_home_links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 80px;
+
+}
+
+.section_home_links ul li {
+    max-width: 480px;
+    width: 480px;
+}
+
+.section_home_links ul li a {
+    text-align: center;
+    font-size: var(--font-xl);
+    border: 3px solid var(--primary-color);
+    width: 100%;
+    display: inline-flex;
+    border-radius: 24px;
+    align-items: center;
+    justify-content: center;
+    padding: 3% 0;
+}
+
+.section_home_links ul li.link-product i {
+    width: 64px;
+    height: 64px;
+    background: url(../images/icons/ShieldCheck.svg);
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.section_home_links ul li.link-icon-login i {
+    width: 64px;
+    height: 64px;
+    background: url(../images/icons/users.svg);
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.section_home_data {
+    background-color: #fbfbfb;
+    padding: 40px;
+}
+
+.title_block h2 {
+    font-size: var(--font-lg);
+}
+
+.section_home_data .title_block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section_home_data .title_block h2 {
+    display: flex;
+    align-items: center;
+}
+
+.section_home_data .title_block h2 i {
+    width: 40px;
+    height: 40px;
+    background: url(../images/icons/CloudArrowDown.svg) no-repeat;
+    display: inline-block;
+    margin-right: 3px;
+
+}
+
+/* 統計圖表區塊樣式 */
+.section_home_stats {
+  background-color: #fbfbfb;
+  padding: 40px;
+  margin-top: 20px;
+}
+
+.section_home_stats .title_block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.section_home_stats .title_block h2 {
+  display: flex;
+  align-items: center;
+}
+
+.section_home_stats .title_block h2 i {
+  width: 40px;
+  height: 40px;
+  background: url(../images/icons/ChartBar.svg) no-repeat;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.stats-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.stats-card {
+  flex: 1;
+}
+
+.stats-card h3 {
+  font-size: var(--font-lg);
+  margin-bottom: 15px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.chart-container {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .stats-cards {
+    flex-direction: column;
+  }
+  
+  .section_home_stats {
+    padding: 20px;
+  }
+}
