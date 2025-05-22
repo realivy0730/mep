@@ -120,18 +120,18 @@
     margin-right: 40px;
 }
 
+
+/* 統計圖表區塊樣式 */
 .section_home_data {
     background-color: #fbfbfb;
     padding: 40px;
-}
-
-.title_block h2 {
-    font-size: var(--font-lg);
+    margin-top: 20px;
 }
 
 .section_home_data .title_block {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .section_home_data .title_block h2 {
@@ -142,75 +142,92 @@
 .section_home_data .title_block h2 i {
     width: 40px;
     height: 40px;
-    background: url(../images/icons/CloudArrowDown.svg) no-repeat;
+    background: url(../images/icons/ChartBar.svg) no-repeat;
     display: inline-block;
     margin-right: 3px;
-
-}
-
-/* 統計圖表區塊樣式 */
-.section_home_stats {
-  background-color: #fbfbfb;
-  padding: 40px;
-  margin-top: 20px;
-}
-
-.section_home_stats .title_block {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.section_home_stats .title_block h2 {
-  display: flex;
-  align-items: center;
-}
-
-.section_home_stats .title_block h2 i {
-  width: 40px;
-  height: 40px;
-  background: url(../images/icons/ChartBar.svg) no-repeat;
-  display: inline-block;
-  margin-right: 3px;
 }
 
 .stats-cards {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
 .stats-card {
-  flex: 1;
+    flex: 1;
 }
 
 .stats-card h3 {
-  font-size: var(--font-lg);
-  margin-bottom: 15px;
-  color: var(--text-primary);
-  font-weight: 500;
+    font-size: var(--font-lg);
+    margin-bottom: 15px;
+    color: var(--text-primary);
+    font-weight: 500;
 }
 
 .chart-container {
-  height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .chart-container canvas {
-  width: 100% !important;
-  height: 100% !important;
+    width: 100% !important;
+    height: 100% !important;
 }
 
 /* 響應式設計 */
 @media (max-width: 768px) {
-  .stats-cards {
-    flex-direction: column;
-  }
-  
-  .section_home_stats {
-    padding: 20px;
-  }
+    .stats-cards {
+        flex-direction: column;
+    }
+
+    .section_home_stats {
+        padding: 20px;
+    }
+}
+/* 最新消息區塊樣式 */
+.section_home_news {
+    background-color: #fbfbfb;
+    padding: 40px;
+    margin-top: 20px;
+}
+
+.section_home_news .title_block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section_home_news .title_block h2 {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-lg);
+}
+
+.section_home_news .title_block h2 i {
+    width: 40px;
+    height: 40px;
+    background: url(../images/icons/Megaphone.svg) no-repeat;
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.news_slider {
+    margin-bottom: 20px;
+}
+
+.news_slider .swiper-slide {
+    height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .section_home_news {
+        padding: 20px;
+    }
 }

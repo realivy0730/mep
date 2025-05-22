@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
     swiperIndexSplish();
     // 初始化統計圖表輪播
     initStatsSwiper();
+    // 初始化最新消息輪播
+    initNewsSwiper();
     // 初始化所有圖表
     initCharts();
 });
@@ -61,6 +63,25 @@ function initStatsSwiper() {
             slideChangeTransitionEnd: function() {
                 window.dispatchEvent(new Event('resize'));
             }
+        }
+    });
+}
+
+/**
+ * 初始化最新消息輪播
+ */
+function initNewsSwiper() {
+    let newsSwiper = new Swiper(".section_home_news .swiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".section_home_news .slider_pagination",
+            clickable: true,
         }
     });
 }
