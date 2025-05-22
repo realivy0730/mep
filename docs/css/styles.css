@@ -466,7 +466,6 @@ button {
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: var(--spacing-xl);
-    margin-bottom: 2rem;
 }
 
 .content-title {
