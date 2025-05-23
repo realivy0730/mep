@@ -187,9 +187,9 @@
         padding: 20px;
     }
 }
+
 /* 最新消息區塊樣式 */
 .section_home_news {
-    background-color: #fbfbfb;
     padding: 40px;
     margin-top: 20px;
 }
@@ -198,36 +198,108 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    border-bottom: 1px solid var(--primary-color);
+    padding-bottom: 10px;
 }
 
 .section_home_news .title_block h2 {
     display: flex;
     align-items: center;
-    font-size: var(--font-lg);
+
 }
 
 .section_home_news .title_block h2 i {
     width: 40px;
     height: 40px;
-    background: url(../images/icons/Megaphone.svg) no-repeat;
+    background: url(../images/icons/icon_news.svg) no-repeat;
     display: inline-block;
     margin-right: 3px;
 }
 
-.news_slider {
-    margin-bottom: 20px;
+.news_list {
+    list-style: none;
+    padding: 0;
 }
 
-.news_slider .swiper-slide {
-    height: 200px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+.news_list li {
+    border-bottom: 1px solid #e484f56;
+    position: relative;
+    height: 64px;
+    overflow: hidden;
+}
+
+.news_list li:last-child {
+    border-bottom: none;
+}
+
+.news_list li a {
+    display: flex;
+    padding: 15px 10px;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.news_list li a:hover {
+    background-color: #f0f0f0;
+}
+
+.news_list li a i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -8px;
+}
+
+.news_date {
+    color: #0D6389;
+    font-weight: 500;
+    min-width: 100px;
+    margin-right: 24px;
+    padding-right: 24px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.news_date:after {
+    content: "";
+    background-color: #000;
+    height: 24px;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: 20%;
+}
+
+.news_title {
+    color: var(--text-primary);
+}
+
+.linkMore a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkMore a i {
+    width: 32px;
+    height: 32px;
+    background: url(../images/icons/CaretCircleRight.svg) no-repeat;
+    display: inline-block;
+    margin-right: 3px;
 }
 
 /* 響應式設計 */
 @media (max-width: 768px) {
     .section_home_news {
         padding: 20px;
+    }
+
+    .news_list li a {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .news_date {
+        margin-bottom: 5px;
     }
 }
