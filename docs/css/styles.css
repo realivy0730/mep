@@ -450,8 +450,6 @@ button {
     color: #ccc;
 }
 
-.breadcrumb-item a {}
-
 .breadcrumb-item.active {
     color: #16336c;
 }
@@ -459,7 +457,7 @@ button {
 /* Main Content Area Styles */
 .main-content {
     padding: 0;
-    background-color: var(--bg-secondary);
+    /* background-color: var(--bg-secondary); */
 }
 
 .content-wrapper {
@@ -1893,7 +1891,7 @@ button {
 
     .table-card-responsive td {
         position: relative;
-        padding-left: 30%;
+        padding-left: 40%;
         padding-bottom: 10px;
         padding-top: 10px;
         min-height: 30px;

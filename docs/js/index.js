@@ -33,10 +33,7 @@ function swiperIndexSplish() {
         effect: 'fade',
         fadeEffect: {
             crossFade: true
-        },
-        // thumbs: {
-        //   swiper: indexGalleryThumbs
-        // }
+        }
     });
 }
 
@@ -53,12 +50,20 @@ function initStatsSwiper() {
             disableOnInteraction: false,
         },
         pagination: {
-            el: ".section_home_stats .slider_pagination",
+            el: ".slider_pagination",
             clickable: true,
+        },
+        pagination: {
+            el: ".slider_pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".slider_button-next",
+            prevEl: ".slider_button-prev",
         },
         // 當輪播切換時重新渲染圖表，避免尺寸問題
         on: {
-            slideChangeTransitionEnd: function() {
+            slideChangeTransitionEnd: function () {
                 window.dispatchEvent(new Event('resize'));
             }
         }

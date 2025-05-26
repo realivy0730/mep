@@ -107,7 +107,8 @@
 .section_home_links ul li.link-product i {
     width: 64px;
     height: 64px;
-    background: url(../images/icons/ShieldCheck.svg);
+    background: url(../images/icons/ShieldCheck.svg) no-repeat;
+    background-size: 100%;
     display: inline-block;
     margin-right: 40px;
 }
@@ -115,7 +116,8 @@
 .section_home_links ul li.link-icon-login i {
     width: 64px;
     height: 64px;
-    background: url(../images/icons/users.svg);
+    background: url(../images/icons/users.svg) no-repeat;
+    background-size: 100%;
     display: inline-block;
     margin-right: 40px;
 }
@@ -142,14 +144,15 @@
 .section_home_data .title_block h2 i {
     width: 40px;
     height: 40px;
-    background: url(../images/icons/ChartBar.svg) no-repeat;
+    background: url(../images/icons/CloudArrowDown.svg) no-repeat;
     display: inline-block;
     margin-right: 3px;
+    background-size: 100%;
 }
 
 .stats-cards {
     display: flex;
-    gap: 20px;
+    gap: 12px;
     margin-bottom: 20px;
 }
 
@@ -158,10 +161,7 @@
 }
 
 .stats-card h3 {
-    font-size: var(--font-lg);
     margin-bottom: 15px;
-    color: var(--text-primary);
-    font-weight: 500;
 }
 
 .chart-container {
@@ -197,9 +197,9 @@
 .section_home_news .title_block {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
     padding-bottom: 10px;
+    align-items: center;
 }
 
 .section_home_news .title_block h2 {
@@ -214,6 +214,7 @@
     background: url(../images/icons/icon_news.svg) no-repeat;
     display: inline-block;
     margin-right: 3px;
+    background-size: 100%;
 }
 
 .news_list {
@@ -222,26 +223,24 @@
 }
 
 .news_list li {
-    border-bottom: 1px solid #e484f56;
+    border-bottom: 1px solid #484f56;
     position: relative;
-    height: 64px;
     overflow: hidden;
+    height: 60px;
+    transition: background-color 0.2s;
+    padding: 15px 10px;
 }
 
-.news_list li:last-child {
-    border-bottom: none;
+.news_list li:hover {
+    background-color: #f0f0f0;
 }
 
 .news_list li a {
     display: flex;
-    padding: 15px 10px;
     align-items: center;
-    transition: background-color 0.2s;
+    overflow: hidden;
 }
 
-.news_list li a:hover {
-    background-color: #f0f0f0;
-}
 
 .news_list li a i {
     position: absolute;
@@ -250,10 +249,17 @@
     margin-top: -8px;
 }
 
+.news_list li .news_title {
+    overflow: hidden;
+    margin-right: 70px;
+    height: 29px;
+    overflow: hidden;
+}
+
 .news_date {
     color: #0D6389;
     font-weight: 500;
-    min-width: 100px;
+    min-width: 120px;
     margin-right: 24px;
     padding-right: 24px;
     position: relative;
@@ -285,13 +291,14 @@
     height: 32px;
     background: url(../images/icons/CaretCircleRight.svg) no-repeat;
     display: inline-block;
-    margin-right: 3px;
+    margin-left: 4px;
+    background-size: 100%;
 }
 
 /* 響應式設計 */
 @media (max-width: 768px) {
     .section_home_news {
-        padding: 20px;
+        padding: 6%;
     }
 
     .news_list li a {
@@ -301,5 +308,84 @@
 
     .news_date {
         margin-bottom: 5px;
+    }
+
+    .news_date:after {
+        display: none;
+    }
+
+    .news_list li {
+        height: 80px;
+    }
+
+    .news_date {
+        margin-right: inherit;
+        padding-right: inherit;
+    }
+
+    .section_home_links {
+        padding: 30px 20px;
+    }
+
+    .section_home_links ul {
+        gap: 20px;
+    }
+
+    .section_home_data .title_block {
+        flex-direction: column;
+    }
+
+    .section_home_data {
+        padding: 6%;
+    }
+
+    .linkMore a {
+        justify-content: left
+    }
+
+    .section_home_links ul li {
+        max-width: 40%;
+        width: 40%;
+    }
+
+    .section_home_links ul li a {
+        padding: 3%;
+    }
+
+    .section_home_links ul li.link-icon-login i {
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+    }
+
+    .section_home_links ul li.link-product i {
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+    }
+
+    .section_home_data .title_block h2 {
+        font-size: 20px;
+    }
+
+    .section_home_news .title_block h2 {
+        font-size: 20px;
+    }
+
+    .section_home_data .title_block h2 i {
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+    }
+
+    .section_home_news .title_block h2 i {
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+    }
+
+    .linkMore a i {
+        width: 24px;
+        height: 24px;
     }
 }
