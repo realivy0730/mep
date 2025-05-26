@@ -1,4 +1,29 @@
 /*---------swiper--------------*/
+.swiper-slide .swiper_box .slider_img img {
+    width: 100%;
+}
+
+/* 桌面版顯示的 banner 圖 */
+.swiper-slide .swiper_box .slider_img img.desktop-banner {
+    display: block;
+}
+
+/* 手機版顯示的 banner 圖 */
+.swiper-slide .swiper_box .slider_img img.mobile-banner {
+    display: none;
+}
+
+/* 手機版媒體查詢 */
+@media only screen and (max-width: 768px) {
+    .swiper-slide .swiper_box .slider_img img.desktop-banner {
+        display: none;
+    }
+    
+    .swiper-slide .swiper_box .slider_img img.mobile-banner {
+        display: block;
+    }
+}
+
 .swiper_box {
     line-height: 0;
 }
