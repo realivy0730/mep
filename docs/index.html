@@ -12,6 +12,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <link rel="stylesheet" href="js/libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- 引入 Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="energy-system">
@@ -19,19 +23,196 @@
       <div id="header-placeholder"></div>
 
       <!-- Breadcrumb Navigation -->
-      <div class="breadcrumb-container container">
-        <ul class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="index.html">首頁</a>
-          </li>
-          <li class="breadcrumb-item active">公告與法令</li>
-        </ul>
-      </div>
 
       <!-- Main Content Area -->
       <main class="main-content container">
-        <div class="content-wrapper">
-          <!-- Sidebar -->
+        <div class="home-wrapper">
+          <section class="section_home_slider">
+            <div class="swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <div class="swiper_box">
+                    <div class="slider_img">
+                      <img
+                        src="images/banner_01.png"
+                        alt="最懂業主的代銷公司建商品牌幕後推手"
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="swiper_box">
+                    <div class="slider_img">
+                      <img
+                        src="images/banner_02.png"
+                        alt="最懂業主的代銷公司建商品牌幕後推手"
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="swiper_box">
+                    <div class="slider_img">
+                      <img
+                        src="images/banner_03.png"
+                        alt="最懂業主的代銷公司建商品牌幕後推手"
+                      />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="slider_controls">
+                <div class="slider_pagination"></div>
+              </div>
+            </div>
+          </section>
+          <section class="section_home_links">
+            <ul>
+              <li class="link-product">
+                <a href="javascript:void(0);" title="已登錄備查產品">
+                  <i></i>
+                  <span>已登錄<br />備查產品</span></a
+                >
+              </li>
+              <li class="link-icon-login">
+                <a href="javascript:void(0);" title="廠商登入">
+                  <i></i>
+                  <span>廠商<br />登入</span></a
+                >
+              </li>
+            </ul>
+          </section>
+
+          <section class="section_home_data">
+            <div class="title_block">
+              <h2><i></i><span>政府公式資料統計與下載</span></h2>
+              <div class="linkMore">
+                <a href="javascript:void(0);" title="Open Data"
+                  ><span>Open Data</span><i></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- 統計圖表輪播 -->
+            <div class="stats-swiper swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <div class="stats-cards">
+                    <div class="stats-card box">
+                      <h3>能源使用效率統計</h3>
+                      <div class="chart-container">
+                        <canvas id="efficiencyChart"></canvas>
+                      </div>
+                    </div>
+                    <div class="stats-card box">
+                      <h3>節能產品市佔率</h3>
+                      <div class="chart-container">
+                        <canvas id="marketShareChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 第二頁輪播 (2張卡片) -->
+                <li class="swiper-slide">
+                  <div class="stats-cards">
+                    <div class="stats-card box">
+                      <h3>年度能源節省量</h3>
+                      <div class="chart-container">
+                        <canvas id="energySavingChart"></canvas>
+                      </div>
+                    </div>
+                    <div class="stats-card box">
+                      <h3>各類產品效率比較</h3>
+                      <div class="chart-container">
+                        <canvas id="productComparisonChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 第三頁輪播 (2張卡片) -->
+                <li class="swiper-slide">
+                  <div class="stats-cards">
+                    <div class="stats-card box">
+                      <h3>碳排放減少量</h3>
+                      <div class="chart-container">
+                        <canvas id="carbonReductionChart"></canvas>
+                      </div>
+                    </div>
+                    <div class="stats-card box">
+                      <h3>能源標章申請數量</h3>
+                      <div class="chart-container">
+                        <canvas id="labelApplicationChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="slider_controls">
+                <div class="slider_pagination"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section_home_news">
+            <div class="title_block">
+              <h2><i></i>最新消息</h2>
+              <div class="linkMore">
+                <a href="announcements.html" title="更多消息">
+                  <span>看更多</span> <i></i
+                ></a>
+              </div>
+            </div>
+            <ul class="news_list">
+              <li>
+                <a href="javascript:void(0);">
+                  <span class="news_date">2024-05-20</span>
+                  <span class="news_title"
+                    >能源效率管理系統2.0版本上線公告</span
+                  >
+                  <i class="fas fa-chevron-right"></i>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <span class="news_date">2024-05-15</span>
+                  <span class="news_title"
+                    >2024年第二季能源效率標章申請開放公告</span
+                  >
+                  <i class="fas fa-chevron-right"></i>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <span class="news_date">2024-05-10</span>
+                  <span class="news_title"
+                    >關於調整能源效率分級標準之說明會通知</span
+                  >
+                  <i class="fas fa-chevron-right"></i>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <span class="news_date">2024-05-05</span>
+                  <span class="news_title"
+                    >2024年度能源效率標章推廣計畫開始申請</span
+                  >
+                  <i class="fas fa-chevron-right"></i>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <span class="news_date">2024-05-01</span>
+                  <span class="news_title"
+                    >能源效率管理系統維護公告 (5/10-5/11)</span
+                  >
+                  <i class="fas fa-chevron-right"></i>
+                </a>
+              </li>
+            </ul>
+          </section>
         </div>
       </main>
 
@@ -40,6 +221,11 @@
     </div>
 
     <script src="js/main.js"></script>
+    <script
+      type="text/javascript"
+      src="js/libs/swiper/swiper-bundle.min.js"
+    ></script>
+    <script type="text/javascript" src="js/index.js"></script>
     <!-- 引入 Header 元件的 JavaScript -->
     <script src="js/header.js"></script>
     <!-- 引入 Footer 元件的 JavaScript -->
