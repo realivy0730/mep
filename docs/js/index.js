@@ -3,7 +3,7 @@
  */
 document.addEventListener('DOMContentLoaded', function () {
     // 初始化首頁輪播
-    swiperIndexSplish();
+    initMainSwiper();
     // 初始化統計圖表輪播
     initStatsSwiper();
     // 初始化所有圖表
@@ -13,27 +13,21 @@ document.addEventListener('DOMContentLoaded', function () {
 /**
  * 初始化首頁主輪播
  */
-function swiperIndexSplish() {
-    let swiper = new Swiper(".section_home_slider .swiper", {
+function initMainSwiper() {
+    const swiper = new Swiper('.full-width-slider', {
         loop: true,
-        loopedSlides: 2,
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
-            stopOnLastSlide: false,
         },
         pagination: {
-            el: ".slider_pagination",
+            el: '.swiper-pagination',
             clickable: true,
         },
         navigation: {
-            nextEl: ".slider_button-next",
-            prevEl: ".slider_button-prev",
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        }
     });
 }
 
@@ -50,11 +44,7 @@ function initStatsSwiper() {
             disableOnInteraction: false,
         },
         pagination: {
-            el: ".slider_pagination",
-            clickable: true,
-        },
-        pagination: {
-            el: ".slider_pagination",
+            el: ".stats-pagination",
             clickable: true,
         },
         navigation: {

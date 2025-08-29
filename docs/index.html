@@ -12,7 +12,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <link rel="stylesheet" href="js/libs/swiper/swiper-bundle.min.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/index.css" />
     <!-- 引入 Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -28,60 +32,60 @@
       <main class="main-content container">
         <div class="home-wrapper">
           <section class="section_home_slider">
-            <div class="swiper">
-              <ul class="swiper-wrapper">
-                <li class="swiper-slide">
-                  <div class="swiper_box">
-                    <div class="slider_img">
-                      <img
-                        src="images/banner_01.png"
-                        alt="中華民國能源效率管理系統"
-                        class="desktop-banner"
-                      />
-                      <img
-                        src="images/banner_01_m.png"
-                        alt="中華民國能源效率管理系統"
-                        class="mobile-banner"
-                      />
-                    </div>
-                  </div>
-                </li>
-                <li class="swiper-slide">
-                  <div class="swiper_box">
-                    <div class="slider_img">
-                      <img
-                        src="images/banner_02.png"
-                        alt="中華民國能源效率管理系統"
-                        class="desktop-banner"
-                      />
-                      <img
-                        src="images/banner_02_m.png"
-                        alt="中華民國能源效率管理系統"
-                        class="mobile-banner"
-                      />
-                    </div>
-                  </div>
-                </li>
-                <li class="swiper-slide">
-                  <div class="swiper_box">
-                    <div class="slider_img">
-                      <img
-                        src="images/banner_03.png"
-                        alt="中華民國能源效率管理系統"
-                        class="desktop-banner"
-                      />
-                      <img
-                        src="images/banner_03_m.png"
-                        alt="中華民國能源效率管理系統"
-                        class="mobile-banner"
-                      />
-                    </div>
-                  </div>
-                </li>
-              </ul>
-              <div class="slider_controls">
-                <div class="slider_pagination"></div>
+            <div class="swiper full-width-slider">
+              <div class="swiper-wrapper">
+
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="https://shoplineimg.com/59795dee59d524dfce0000a0/68a3cc73f51844000e21d3de/2160x.webp">
+                    <source srcset="https://shoplineimg.com/59795dee59d524dfce0000a0/68a2dd6e237f4f0012af2c85/1080x.webp">
+                    <img src="https://shoplineimg.com/59795dee59d524dfce0000a0/68a3cc73f51844000e21d3de/750x.webp" alt="戀練七夕，最有心意💓" />
+                  </picture>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="https://shoplineimg.com/59795dee59d524dfce0000a0/689985454b19c43c065b7892/2160x.webp">
+                    <source srcset="https://shoplineimg.com/59795dee59d524dfce0000a0/6899854cd1da31000a6987b9/1080x.webp">
+                    <img src="https://shoplineimg.com/59795dee59d524dfce0000a0/689985454b19c43c065b7892/750x.webp" alt="Manduka 季末出清" />
+                  </picture>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="https://shoplineimg.com/59795dee59d524dfce0000a0/668ce8bd7a4f5e0013ef1b5a/2160x.webp">
+                    <source srcset="https://shoplineimg.com/59795dee59d524dfce0000a0/668ce8c6d183ad00228af9a9/1080x.webp">
+                    <img src="https://shoplineimg.com/59795dee59d524dfce0000a0/668ce8bd7a4f5e0013ef1b5a/750x.webp" alt="Manduka 台灣總代理，全品項 9 折" />
+                  </picture>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="https://shoplineimg.com/59795dee59d524dfce0000a0/6698dd49f6829200160c9111/2160x.webp">
+                    <source srcset="https://shoplineimg.com/59795dee59d524dfce0000a0/6698dd4e482347001f421ee9/1080x.webp">
+                    <img src="https://shoplineimg.com/59795dee59d524dfce0000a0/6698dd49f6829200160c9111/750x.webp" alt="pernext-cpt" />
+                  </picture>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="swiper-slide">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="https://shoplineimg.com/59795dee59d524dfce0000a0/6583f61de4274900208cfca6/2160x.webp">
+                    <source srcset="https://shoplineimg.com/59795dee59d524dfce0000a0/657abb1dc0c8ea00173547d3/1080x.webp">
+                    <img src="https://shoplineimg.com/59795dee59d524dfce0000a0/6583f61de4274900208cfca6/750x.webp" alt="Yoga Design Lab set" />
+                  </picture>
+                </div>
+
               </div>
+
+              <!-- Swiper 控制元件 -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
             </div>
           </section>
           <section class="section_home_links">
@@ -169,7 +173,7 @@
               </ul>
 
               <div class="slider_controls">
-                <div class="slider_pagination"></div>
+                <div class="stats-pagination"></div>
               </div>
             </div>
           </section>
@@ -239,10 +243,8 @@
     </div>
 
     <script src="js/main.js"></script>
-    <script
-      type="text/javascript"
-      src="js/libs/swiper/swiper-bundle.min.js"
-    ></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <!-- 引入 Header 元件的 JavaScript -->
     <script src="js/header.js"></script>

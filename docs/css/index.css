@@ -1,118 +1,32 @@
-/*---------swiper--------------*/
-.swiper-slide .swiper_box .slider_img img {
-    width: 100%;
+/*---------swiper 滿版設計--------------*/
+.full-width-slider {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
 }
 
-/* 桌面版顯示的 banner 圖 */
-.swiper-slide .swiper_box .slider_img img.desktop-banner {
-    display: block;
+.swiper-slide {
+  width: 100vw;
+  height: 60vh;
 }
 
-/* 手機版顯示的 banner 圖 */
-.swiper-slide .swiper_box .slider_img img.mobile-banner {
-    display: none;
+.swiper-slide picture,
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-/* 手機版媒體查詢 */
+/* 手機版調整 */
 @media only screen and (max-width: 768px) {
-    .swiper-slide .swiper_box .slider_img img.desktop-banner {
-        display: none;
-    }
-
-    .swiper-slide .swiper_box .slider_img img.mobile-banner {
-        display: block;
-    }
-    
-    /* 手機版輪播控制優化 */
-    .swiper .slider_controls {
-        width: 90%;
-        max-width: 250px;
-        height: 30px;
-    }
-    
-    .swiper .slider_controls .slider_pagination .swiper-pagination-bullet {
-        width: 8px;
-        height: 8px;
-        margin: 0 3px;
-    }
-    
-    .swiper .slider_controls .slider_pagination .swiper-pagination-bullet-active {
-        width: 30px;
+    .swiper-slide {
+        height: 40vh;
     }
 }
 
 .swiper_box {
     line-height: 0;
-}
-
-.swiper .slider_controls {
-    position: relative;
-    z-index: 12;
-    height: 36px;
-    width: 80%;
-    max-width: 300px;
-    margin: 0 auto;
-}
-
-.swiper .slider_controls .swiper_slide-active,
-.swiper .slider_controls .swiper_slide-prev,
-.swiper .slider_controls .swiper_slide-next {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.swiper .slider_controls .slider_pagination {
-    text-align: center;
-}
-
-.swiper .slider_controls .slider_pagination .swiper-pagination-bullet {
-    width: 11px;
-    height: 11px;
-    display: inline-block;
-    background: #000;
-    opacity: 0.2;
-    margin: 0 5px;
-    border-radius: 20px;
-    transition: opacity 0.5s, background-color 0.5s, width 0.5s;
-    transition-delay: 0.5s, 0.5s, 0s;
-}
-
-.swiper .slider_controls ..swiper_pagination-clickable .swiper-pagination-bullet {
-    cursor: pointer;
-}
-
-.swiper .slider_controls .slider_pagination .swiper-pagination-bullet-active {
-    opacity: 1;
-    background: var(--primary-color);
-    width: 40px;
-    transition-delay: 0s;
-}
-
-.swiper .slider_controls .slider_button-next,
-.swiper .slider_controls .slider_button-prev {
-    position: absolute;
-    top: 50%;
-    width: 36px;
-    height: 36px;
-    margin-top: -18px;
-    z-index: 10;
-    cursor: pointer;
-    background-size: 30%;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 100%;
-}
-
-.swiper .slider_controls .slider_button-prev {
-    background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")no-repeat center/30%, linear-gradient(90deg, #D93D59 0%, #E87373 100%);
-    left: 10px;
-    right: auto;
-}
-
-.swiper .slider_controls .slider_button-next {
-    background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")no-repeat center/30%, linear-gradient(90deg, #D93D59 0%, #E87373 100%);
-    right: 10px;
-    left: auto;
 }
 
 .section_home_links {
@@ -217,6 +131,31 @@
 .chart-container canvas {
     width: 100% !important;
     height: 100% !important;
+}
+
+/* 統計圖表分頁器樣式 */
+.stats-swiper .slider_controls .stats-pagination {
+    text-align: center;
+}
+
+.stats-swiper .slider_controls .stats-pagination .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    background: #000;
+    opacity: 0.2;
+    margin: 0 5px;
+    border-radius: 20px;
+    transition: opacity 0.5s, background-color 0.5s, width 0.5s;
+    transition-delay: 0.5s, 0.5s, 0s;
+    cursor: pointer;
+}
+
+.stats-swiper .slider_controls .stats-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: var(--primary-color);
+    width: 40px;
+    transition-delay: 0s;
 }
 
 /* 響應式設計 */
