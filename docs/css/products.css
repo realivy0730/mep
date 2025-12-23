@@ -265,6 +265,48 @@
     transform: inherit
 }
 
+.catalog-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 65px;
+    align-items: center;
+}
+
+
+
+.catalog-list ul li {
+    text-align: center;
+    width: 140px;
+}
+
+.catalog-list ul li .cat-icon {
+    background-color: #ECEDFF;
+    border-radius: 16px;
+    border: 1px solid #fff;
+    text-align: center;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 8px;
+}
+
+.catalog-list ul li:nth-child(even) .cat-icon {
+    background-color: #E9F1FC;
+}
+
+.catalog-list ul li .cat-icon i {
+    width: 65%;
+    height: 65%;
+}
+
+.catalog-list ul li .name {
+    height: 80px;
+    overflow: hidden;
+}
+
 @media (max-width: 576px) {
 
     .content-header {
@@ -273,5 +315,13 @@
 
     .date-range-controls {
         gap: 5px;
+    }
+
+    .catalog-list ul {
+        gap: 0;
+    }
+
+    .catalog-list ul li {
+        margin: 10px 20px;
     }
 }

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>產品資料 - 中華民國能源效率管理系統</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- 添加 Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="energy-system">
+        <!-- Header 元件佔位符 -->
+        <div id="header-placeholder"></div>
+
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb-container container">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="index.html">首頁</a>
+                </li>
+                <li class="breadcrumb-item active">公告與法令</li>
+            </ul>
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="content-wrapper container">
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="search-section">
+                        <div class="form-line">
+                            <h3 class="form-title">搜尋</h3>
+                            <div class="search-box">
+                                <input type="text" placeholder="Search" class="search-input" />
+                                <i class="fas fa-search search-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-line">
+                            <h3 class="form-title">登錄編號</h3>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="EN-114-000130" class="form-input" />
+                            </div>
+                        </div>
+
+                        <div class="form-line">
+                            <h3 class="form-title">標示義務公司</h3>
+                            <div class="select-wrapper">
+                                <select class="dropdown">
+                                    <option>標示義務公司</option>
+                                    <option>其他公司</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-line">
+
+                            <h3 class="form-title">產品狀態</h3>
+                            <div class="select-wrapper">
+                                <select class="dropdown">
+                                    <option>已登錄</option>
+                                    <option>已註銷</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                            </div>
+                       </div>
+
+                       <div class="form-line">
+                            <h3 class="form-title">產品類別</h3>
+                            <div class="select-wrapper">
+                                <select class="dropdown">
+                                    <option>全部</option>
+                                    <option>電器</option>
+                                    <option>機械</option>
+                                    <option>其他</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-line">
+                            <h3 class="form-title">效率等級</h3>
+                                <div class="select-wrapper">
+                                    <select class="dropdown">
+                                        <option>全部</option>
+                                        <option>IE3</option>
+                                        <option>IE4</option>
+                                        <option>1級</option>
+                                        <option>2級</option>
+                                        <option>3級</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                                </div>
+                        </div>
+
+
+                        <div class="form-line">
+                            <h3 class="form-title">功率</h3>
+                            <div class="range-selector">
+                                <div class="select-wrapper range-min">
+                                    <select class="dropdown">
+                                        <option>1</option>
+                                        <option>5</option>
+                                        <option>10</option>
+                                        <option>50</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                                </div>
+                                <span class="range-separator">-</span>
+                                <div class="select-wrapper range-max">
+                                    <select class="dropdown">
+                                        <option>10000</option>
+                                        <option>5000</option>
+                                        <option>1000</option>
+                                        <option>500</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn">查詢</button>
+                    </div>
+                </aside>
+
+                <!-- Content Area -->
+                <div class="content">
+                    <div class="inner-header">
+                        <h1>
+                            產品類別
+                        </h1>
+                    </div>
+
+                    <div class="catalog-list">
+                        <ul>
+                            <li>
+                                <a href="products.html" title="低壓三相鼠籠型感應電動機">
+                                    <div class="cat-icon">
+                                        <i style="background: url(images/icons/icon_product.svg) no-repeat; background-size: 100%;"></i>
+                                    </div>
+                                    <div class="name">低壓三相鼠籠型感應電動機</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="products.html" title="固定轉速迴轉式空氣壓縮機">
+                                    <div class="cat-icon">
+                                        <i style="background: url(images/icons/icon_product.svg) no-repeat; background-size: 100%;"></i>
+                                    </div>
+                                    <div class="name">固定轉速迴轉式空氣壓縮機</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="products.html" title="可變轉速迴轉式空氣壓縮機">
+                                    <div class="cat-icon">
+                                        <i style="background: url(images/icons/icon_product.svg) no-repeat; background-size: 100%;"></i>
+                                    </div>
+                                    <div class="name">可變轉速迴轉式空氣壓縮機</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="products.html" title="活塞式空氣壓縮機">
+                                    <div class="cat-icon">
+                                        <i style="background: url(images/icons/icon_product.svg) no-repeat; background-size: 100%;"></i>
+                                    </div>
+                                    <div class="name">活塞式空氣壓縮機</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="products.html" title="單吸單段聯結式迴轉動力水泵">
+                                    <div class="cat-icon">
+                                        <i style="background: url(images/icons/icon_product.svg) no-repeat; background-size: 100%;"></i>
+                                    </div>
+                                    <div class="name">單吸單段聯結式迴轉動力水泵</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="products.html" title="單吸單段直結式迴轉動力水泵">
+                                    <div class="cat-icon">
+                                        <i style="background: url(images/icons/icon_product.svg) no-repeat; background-size: 100%;"></i>
+                                    </div>
+                                    <div class="name">單吸單段直結式迴轉動力水泵</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="products.html" title="進出水口同軸之單吸單段直結式迴轉動力水泵">
+                                    <div class="cat-icon">
+                                        <i style="background: url(images/icons/icon_product.svg) no-repeat; background-size: 100%;"></i>
+                                    </div>
+                                    <div class="name">進出水口同軸之單吸單段直結式迴轉動力水泵</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="products.html" title="軸流式通風機">
+                                    <div class="cat-icon">
+                                        <i style="background: url(images/icons/icon_product.svg) no-repeat; background-size: 100%;"></i>
+                                    </div>
+                                    <div class="name">軸流式通風機</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="products.html" title="前傾離心式通風機">
+                                    <div class="cat-icon">
+                                        <i style="background: url(images/icons/icon_product.svg) no-repeat; background-size: 100%;"></i>
+                                    </div>
+                                    <div class="name">前傾離心式通風機</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="products.html" title="徑向離心式通風機">
+                                    <div class="cat-icon">
+                                        <i style="background: url(images/icons/icon_product.svg) no-repeat; background-size: 100%;"></i>
+                                    </div>
+                                    <div class="name">徑向離心式通風機</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="products.html" title="後傾離心式通風機（有殼）">
+                                    <div class="cat-icon">
+                                        <i style="background: url(images/icons/icon_product.svg) no-repeat; background-size: 100%;"></i>
+                                    </div>
+                                    <div class="name">後傾離心式通風機（有殼）</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="products.html" title="後傾離心式通風機（無殼）">
+                                    <div class="cat-icon">
+                                        <i style="background: url(images/icons/icon_product.svg) no-repeat; background-size: 100%;"></i>
+                                    </div>
+                                    <div class="name">後傾離心式通風機（無殼）</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="products.html" title="混流式通風機">
+                                    <div class="cat-icon">
+                                        <i style="background: url(images/icons/icon_product.svg) no-repeat; background-size: 100%;"></i>
+                                    </div>
+                                    <div class="name">混流式通風機</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+        </main>
+
+        <!-- Footer 元件佔位符 -->
+        <div id="footer-placeholder"></div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/zh-tw.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <!-- 引入 Header 元件的 JavaScript -->
+    <script src="js/header.js"></script>
+    <!-- 引入 Footer 元件的 JavaScript -->
+    <script src="js/footer.js"></script>
+</body>
+
+</html>

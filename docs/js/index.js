@@ -2,56 +2,83 @@
  * 主要 JavaScript 檔案
  */
 document.addEventListener('DOMContentLoaded', function () {
-    // 初始化首頁輪播
-    initMainSwiper();
-    // 初始化統計圖表輪播
-    initStatsSwiper();
-    // 初始化所有圖表
-    initCharts();
+    console.log('DOM 載入完成');
+
+    // 延遲初始化輪播，確保 DOM 完全載入
+    setTimeout(function () {
+        console.log('開始初始化輪播...');
+        // 初始化首頁輪播
+        initMainSwiper();
+        // 初始化統計圖表輪播
+        initStatsSwiper();
+    }, 100);
+
+    // 延遲初始化圖表，確保所有元素都載入完成
+    setTimeout(function () {
+        console.log('開始初始化圖表...');
+        if (typeof echarts !== 'undefined') {
+            initCharts();
+        } else {
+            console.error('ECharts 未載入');
+        }
+    }, 1000);
 });
 
 /**
  * 初始化首頁主輪播
  */
 function initMainSwiper() {
+    console.log('初始化主輪播...');
     const swiper = new Swiper('.full-width-slider', {
         loop: true,
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
         },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        on: {
+            slideChange: function () {
+                // 動態切換背景
+                const slider = document.querySelector('.section_home_slider');
+                const slideIndex = this.realIndex + 1; // realIndex 從 0 開始，所以 +1
+
+                // 移除所有背景類別
+                slider.classList.remove('slide-1', 'slide-2', 'slide-3');
+                // 添加當前背景類別
+                slider.classList.add(`slide-${slideIndex}`);
+
+                console.log(`切換到第 ${slideIndex} 張輪播，背景已更新`);
+            }
+        }
     });
+
+    // 初始化時設定第一張背景
+    const slider = document.querySelector('.section_home_slider');
+    if (slider) {
+        slider.classList.add('slide-1');
+    }
+
+    console.log('主輪播初始化完成:', swiper);
 }
 
 /**
  * 初始化統計圖表輪播
  */
 function initStatsSwiper() {
-    let statsSwiper = new Swiper(".stats-swiper", {
+    new Swiper('.stats-swiper', {
         slidesPerView: 1,
         spaceBetween: 30,
-        loop: true,
-        autoplay: {
-            delay: 6000,
-            disableOnInteraction: false,
-        },
         pagination: {
-            el: ".stats-pagination",
+            el: '.stats-pagination',
             clickable: true,
         },
-        navigation: {
-            nextEl: ".slider_button-next",
-            prevEl: ".slider_button-prev",
-        },
-        // 當輪播切換時重新渲染圖表，避免尺寸問題
         on: {
             slideChangeTransitionEnd: function () {
                 window.dispatchEvent(new Event('resize'));
@@ -64,196 +91,302 @@ function initStatsSwiper() {
  * 初始化所有圖表
  */
 function initCharts() {
-    // 設置共用的圖表選項
-    const commonOptions = {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-            legend: {
-                position: 'bottom',
-                labels: {
-                    boxWidth: 12,
-                    font: {
-                        size: 12
+    console.log('開始初始化圖表...');
+
+    // 檢查 ECharts 是否載入
+    if (typeof echarts === 'undefined') {
+        console.error('ECharts 未載入');
+        return;
+    }
+
+    // 檢查 DOM 元素是否存在
+    const chartElements = [
+        'efficiencyChart', 'marketShareChart',
+        'carbonReductionChart', 'labelApplicationChart'
+    ];
+
+    for (let id of chartElements) {
+        const element = document.getElementById(id);
+        if (!element) {
+            console.error(`找不到圖表容器: ${id}`);
+            return;
+        }
+    }
+
+    try {
+        // 1. 能源使用效率統計 - 卡片式統計面板
+        const efficiencyContainer = document.getElementById('efficiencyChart');
+        efficiencyContainer.innerHTML = `
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; height: 100%; padding: 10px;">
+                <div style="background: linear-gradient(135deg, #5b73e8, #4c63d2); color: white; border-radius: 15px; padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; box-shadow: 0 4px 15px rgba(91, 115, 232, 0.3);">
+                    <div style="font-size: 14px; margin-bottom: 15px; opacity: 0.9;">113年有效登錄<br>廠商數量</div>
+                    <div style="font-size: 30px; font-weight: bold; margin: 10px 0;">3499</div>
+                </div>
+                <div style="background: transparent; border: 3px solid #0D6389; border-radius: 15px; padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                    <div style="font-size: 14px; margin-bottom: 15px; color: #666;">有效登錄廠商<br>成長百分比</div>
+                    <div style="font-size: 30px; font-weight: bold; margin: 10px 0; color: #333;">6%</div>
+                </div>
+                <div style="background: transparent; border: 3px solid  #0D6389; border-radius: 15px; padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                    <div style="font-size: 14px; margin-bottom: 15px; color: #666;">113年已獲准登錄<br>廠商家數</div>
+                    <div style="font-size: 30px; font-weight: bold; margin: 10px 0; color: #333;">51</div>
+                </div>
+                <div style="background: linear-gradient(135deg, #5b73e8, #4c63d2); color: white; border-radius: 15px; padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; box-shadow: 0 4px 15px rgba(91, 115, 232, 0.3);">
+                    <div style="font-size: 14px; margin-bottom: 15px; opacity: 0.9;">歷屆登錄廠商<br>家數成長</div>
+                    <div style="font-size: 30px; font-weight: bold; margin: 10px 0;">50%</div>
+                </div>
+            </div>
+        `;
+
+        // 2. 節能產品市佔率 - 圓餅圖（各等級之空壓機登錄數量及占比）
+        const marketShareChart = echarts.init(document.getElementById('marketShareChart'));
+        const marketShareOption = {
+
+            tooltip: {
+                trigger: 'item',
+                formatter: '{b}: {c}款 ({d}%)'
+            },
+            series: [{
+                name: '空壓機登錄數量',
+                type: 'pie',
+                radius: ['0%', '65%'],
+                center: ['50%', '50%'],
+                data: [
+                    { value: 990, name: '1級' },
+                    { value: 81, name: '2級' },
+                    { value: 107, name: '3級' }
+                ],
+                itemStyle: {
+                    borderColor: '#fff',
+                    borderWidth: 2
+                },
+                label: {
+                    show: true,
+                    position: 'outside',
+                    formatter: function (params) {
+                        return `{name|${params.name}/${params.value}款}\n{percent|${params.percent}%}`;
+                    },
+                    rich: {
+                        name: {
+                            fontSize: 16,
+                            color: "rgba(0, 0, 0, 0.7)"
+                        },
+                        percent: {
+                            fontSize: 25,
+                            color: "#0D6389"
+                        }
                     }
+                },
+                labelLine: {
+                    show: true,
+                    length: 20,
+                    length2: 15,
+                    lineStyle: {
+                        color: '#666',
+                        width: 1
+                    }
+                },
+                color: ['#4a6fa5', '#6b5b95', '#8e7cc3'],
+                emphasis: {
+                    itemStyle: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.3)'
+                    }
+                }
+            }]
+        };
+        marketShareChart.setOption(marketShareOption);
+
+
+
+        // 5. 已獲核准登錄廠商數與有效登錄數 - 組合圖表
+        const carbonReductionChart = echarts.init(document.getElementById('carbonReductionChart'), null, { height: 350 });
+        const carbonReductionOption = {
+            title: {
+                text: '已獲核准登錄廠商數與有效登錄數',
+                subtext: '(106年～113年11月)',
+                left: 'left',
+                textStyle: {
+                    fontSize: 16,
+                    color: '#333'
+                },
+                subtextStyle: {
+                    fontSize: 16,
+                    color: '#114BAF'
                 }
             },
             tooltip: {
-                backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                titleColor: '#333',
-                bodyColor: '#666',
-                borderColor: '#ddd',
-                borderWidth: 1
-            }
-        }
-    };
-
-    // 1. 能源使用效率統計 - 折線圖
-    const efficiencyCtx = document.getElementById('efficiencyChart').getContext('2d');
-    new Chart(efficiencyCtx, {
-        type: 'line',
-        data: {
-            labels: ['2019', '2020', '2021', '2022', '2023', '2024'],
-            datasets: [{
-                label: '能源使用效率指數',
-                data: [65, 72, 78, 85, 90, 95],
-                borderColor: '#1a5aa0',
-                backgroundColor: 'rgba(26, 90, 160, 0.1)',
-                borderWidth: 2,
-                fill: true,
-                tension: 0.4
-            }]
-        },
-        options: {
-            ...commonOptions,
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: '效率指數'
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross'
+                }
+            },
+            legend: {
+                data: ['年份'],
+                right: 'right'
+            },
+            grid: {
+                left: '8%',
+                right: '8%',
+                bottom: '15%',
+                top: '30%'
+            },
+            xAxis: {
+                type: 'category',
+                data: ['106', '107', '108', '109', '110', '111', '112', '113.11'],
+                axisLine: {
+                    lineStyle: {
+                        color: '#ddd'
                     }
                 }
-            }
-        }
-    });
-
-    // 2. 節能產品市佔率 - 圓餅圖
-    const marketShareCtx = document.getElementById('marketShareChart').getContext('2d');
-    new Chart(marketShareCtx, {
-        type: 'pie',
-        data: {
-            labels: ['一級能效', '二級能效', '三級能效', '其他'],
-            datasets: [{
-                data: [45, 30, 15, 10],
-                backgroundColor: [
-                    '#1a5aa0',
-                    '#4285F4',
-                    '#80b1fb',
-                    '#d0e0fc'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: commonOptions
-    });
-
-    // 3. 年度能源節省量 - 柱狀圖
-    const energySavingCtx = document.getElementById('energySavingChart').getContext('2d');
-    new Chart(energySavingCtx, {
-        type: 'bar',
-        data: {
-            labels: ['2019', '2020', '2021', '2022', '2023', '2024'],
-            datasets: [{
-                label: '節省電力 (百萬度)',
-                data: [120, 150, 180, 210, 250, 290],
-                backgroundColor: '#0D6389'
-            }]
-        },
-        options: {
-            ...commonOptions,
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: '百萬度'
+            },
+            yAxis: [{
+                type: 'value',
+                min: 0,
+                max: 80,
+                position: 'left',
+                axisLine: {
+                    lineStyle: {
+                        color: '#ddd'
                     }
-                }
-            }
-        }
-    });
-
-    // 4. 各類產品效率比較 - 雷達圖
-    const productComparisonCtx = document.getElementById('productComparisonChart').getContext('2d');
-    new Chart(productComparisonCtx, {
-        type: 'radar',
-        data: {
-            labels: ['冷氣機', '電冰箱', '洗衣機', '電視機', '照明設備', '電熱水器'],
-            datasets: [{
-                label: '2023年',
-                data: [85, 90, 78, 82, 95, 70],
-                backgroundColor: 'rgba(26, 90, 160, 0.2)',
-                borderColor: '#1a5aa0',
-                borderWidth: 2,
-                pointBackgroundColor: '#1a5aa0'
-            }, {
-                label: '2024年',
-                data: [90, 92, 85, 88, 98, 75],
-                backgroundColor: 'rgba(13, 99, 137, 0.2)',
-                borderColor: '#0D6389',
-                borderWidth: 2,
-                pointBackgroundColor: '#0D6389'
-            }]
-        },
-        options: commonOptions
-    });
-
-    // 5. 碳排放減少量 - 區域圖
-    const carbonReductionCtx = document.getElementById('carbonReductionChart').getContext('2d');
-    new Chart(carbonReductionCtx, {
-        type: 'line',
-        data: {
-            labels: ['2019', '2020', '2021', '2022', '2023', '2024'],
-            datasets: [{
-                label: '碳排放減少量 (萬噸)',
-                data: [50, 65, 80, 95, 115, 140],
-                borderColor: '#17F5FF',
-                backgroundColor: 'rgba(23, 245, 255, 0.2)',
-                borderWidth: 2,
-                fill: true,
-                tension: 0.4
-            }]
-        },
-        options: {
-            ...commonOptions,
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: '萬噸'
-                    }
-                }
-            }
-        }
-    });
-
-    // 6. 能源標章申請數量 - 堆疊柱狀圖
-    const labelApplicationCtx = document.getElementById('labelApplicationChart').getContext('2d');
-    new Chart(labelApplicationCtx, {
-        type: 'bar',
-        data: {
-            labels: ['2019', '2020', '2021', '2022', '2023', '2024'],
-            datasets: [{
-                label: '一級能效',
-                data: [300, 350, 400, 450, 520, 580],
-                backgroundColor: '#1a5aa0'
-            }, {
-                label: '二級能效',
-                data: [200, 220, 240, 260, 280, 300],
-                backgroundColor: '#4285F4'
-            }, {
-                label: '三級能效',
-                data: [100, 120, 130, 140, 150, 160],
-                backgroundColor: '#80b1fb'
-            }]
-        },
-        options: {
-            ...commonOptions,
-            scales: {
-                x: {
-                    stacked: true
                 },
-                y: {
-                    stacked: true,
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: '申請數量'
+                splitLine: {
+                    lineStyle: {
+                        color: '#f0f0f0'
                     }
                 }
-            }
-        }
-    });
+            }, {
+                type: 'value',
+                min: 0,
+                max: 4000,
+                position: 'right',
+                axisLine: {
+                    lineStyle: {
+                        color: '#ddd'
+                    }
+                },
+                splitLine: {
+                    show: false
+                }
+            }],
+            series: [{
+                name: '年份',
+                type: 'bar',
+                data: [24, 44, 46, 47, 47, 49, 50, 51],
+                itemStyle: {
+                    color: '#2E5F8A',
+                    borderRadius: [4, 4, 0, 0]
+                },
+                label: {
+                    show: true,
+                    position: 'inside',
+                    color: '#fff',
+                    fontSize: 12
+                }
+            }, {
+                name: '有效登錄數',
+                type: 'line',
+                yAxisIndex: 1,
+                data: [2249, 2723, 2273, 2825, 3027, 3123, 3309, 3499],
+                lineStyle: {
+                    color: '#4A90E2',
+                    width: 2
+                },
+                itemStyle: {
+                    color: '#4A90E2'
+                },
+                symbol: 'circle',
+                symbolSize: 6,
+                label: {
+                    show: true,
+                    position: 'top',
+                    color: '#333',
+                    fontSize: 10
+                }
+            }]
+        };
+        carbonReductionChart.setOption(carbonReductionOption);
+
+        // 6. 各等級之空壓機登錄數量及占比 - 環形圓餅圖
+        const labelApplicationChart = echarts.init(document.getElementById('labelApplicationChart'));
+        const labelApplicationOption = {
+
+            tooltip: {
+                trigger: 'item',
+                formatter: '{b}: {c}款 ({d}%)'
+            },
+            legend: {
+                show: false
+            },
+
+            series: [
+                {
+                    type: 'pie',
+                    radius: ['40%', '70%'],
+                    center: ['50%', '50%'],
+                    avoidLabelOverlap: true,
+                    label: {
+                        show: true,
+                        position: 'outside',
+                        edgeDistance: '15%',
+                        formatter: function (params) {
+                            return `{name|${params.name}}\n{percent|${params.percent}%}`;
+                        },
+                        rich: {
+                            name: {
+                                fontSize: 14,
+                                color: "rgba(0,0,0,0.7)"
+                            },
+                            percent: {
+                                fontSize: 22,
+                                color: "#0D6389",
+                                fontWeight: "bold"
+                            }
+                        }
+                    },
+                    labelLine: {
+                        show: true,
+                        length: 15,
+                        length2: 10
+                    },
+                    data: [
+                        {
+                            value: 990,
+                            name: '1級',
+                            itemStyle: {
+                                color: '#4285F4'
+                            }
+                        },
+                        {
+                            value: 81,
+                            name: '2級',
+                            itemStyle: {
+                                color: '#7A62CD'
+                            }
+                        },
+                        {
+                            value: 107,
+                            name: '3級',
+                            itemStyle: {
+                                color: '#16F5FF'
+                            }
+                        }
+                    ]
+                }
+            ]
+        };
+        labelApplicationChart.setOption(labelApplicationOption);
+
+        // 響應式處理
+        window.addEventListener('resize', function () {
+            marketShareChart.resize();
+            carbonReductionChart.resize();
+            labelApplicationChart.resize();
+        });
+
+        console.log('所有圖表初始化完成');
+
+    } catch (error) {
+        console.error('圖表初始化失敗:', error);
+    }
 }

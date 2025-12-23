@@ -13,7 +13,7 @@
     /* 背景顏色 */
     --bg-primary: #fff;
     --bg-secondary: #f8f8f8;
-    --bg-light: #f8f9fa;
+    --bg-light: #e9f1fc;
 
     /* 邊框顏色 */
     --border-color: #e0e0e0;
@@ -27,6 +27,7 @@
     --font-xs: 0.85rem;
     --font-sm: 0.9rem;
     --font-base: 1rem;
+    --font-md: 1.125rem;
     --font-lg: 1.25rem;
     --font-xl: 1.563rem;
 
@@ -44,6 +45,8 @@
 
     --primary-gradient: linear-gradient(to right, rgba(11, 77, 191, 1), rgba(0, 55, 163, 1));
     --primary-gradient-button: linear-gradient(79.88deg, #0B4DBF 33.59%, #0037A3 118.07%);
+
+    --light-blue: rgba(233, 241, 252, 1);
 }
 
 
@@ -115,13 +118,13 @@ button {
 
 .btn {
     width: 100%;
-    font-size: var(--font-lg);
+    font-size: var(--font-md);
     font-weight: 700;
     background: var(--primary-gradient-button);
     color: #fff;
     padding: 13px 0;
     display: block;
-    border-radius: 16px;
+    border-radius: 100px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -143,13 +146,13 @@ button {
 
 .btn2 {
     min-width: 256px;
-    font-size: var(--font-lg);
+    font-size: var(--font-md);
     font-weight: 700;
     border: 1px solid rgba(6, 50, 135, 1);
     color: rgba(6, 50, 135, 1);
     padding: 13px 0;
     display: block;
-    border-radius: 16px;
+    border-radius: 100px;
     text-align: center;
     background-color: transparent;
     display: flex;
@@ -248,7 +251,7 @@ button {
     justify-self: center;
     color: #fff;
     padding: 17px var(--spacing-lg) 22px;
-    font-size: var(--font-xl);
+    font-size: var(--font-lg);
     transition: background-color 0.3s;
     display: block;
     font-weight: 500;
@@ -373,8 +376,9 @@ button {
 }
 
 .icon.icon-phone {
-    background: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.0494 5.5C16.0262 5.69057 16.9238 6.16826 17.6275 6.87194C18.3312 7.57561 18.8089 8.47326 18.9994 9.45M15.0494 1.5C17.0787 1.72544 18.971 2.63417 20.4157 4.07701C21.8603 5.51984 22.7715 7.41101 22.9994 9.44M21.9994 17.42V20.42C22.0006 20.6985 21.9435 20.9742 21.832 21.2293C21.7204 21.4845 21.5567 21.7136 21.3515 21.9019C21.1463 22.0901 20.904 22.2335 20.6402 22.3227C20.3764 22.4119 20.0968 22.4451 19.8194 22.42C16.7423 22.0856 13.7864 21.0341 11.1894 19.35C8.77327 17.8147 6.72478 15.7662 5.18945 13.35C3.49942 10.7412 2.44769 7.77099 2.11944 4.68C2.09446 4.40347 2.12732 4.12476 2.21595 3.86162C2.30457 3.59849 2.44702 3.35669 2.63421 3.15162C2.82141 2.94655 3.04925 2.78271 3.30324 2.67052C3.55722 2.55833 3.83179 2.50026 4.10945 2.5H7.10945C7.59475 2.49522 8.06524 2.66708 8.43321 2.98353C8.80118 3.29999 9.04152 3.73945 9.10944 4.22C9.23607 5.18007 9.47089 6.12273 9.80945 7.03C9.94399 7.38792 9.97311 7.77691 9.89335 8.15088C9.8136 8.52485 9.62831 8.86811 9.35944 9.14L8.08945 10.41C9.513 12.9135 11.5859 14.9864 14.0894 16.41L15.3594 15.14C15.6313 14.8711 15.9746 14.6858 16.3486 14.6061C16.7225 14.5263 17.1115 14.5555 17.4694 14.69C18.3767 15.0286 19.3194 15.2634 20.2794 15.39C20.7652 15.4585 21.2088 15.7032 21.526 16.0775C21.8431 16.4518 22.0116 16.9296 21.9994 17.42Z' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.0494 5.5C16.0262 5.69057 16.9238 6.16826 17.6275 6.87194C18.3312 7.57561 18.8089 8.47326 18.9994 9.45M15.0494 1.5C17.0787 1.72544 18.971 2.63417 20.4157 4.07701C21.8603 5.51984 22.7715 7.41101 22.9994 9.44M21.9994 17.42V20.42C22.0006 20.6985 21.9435 20.9742 21.832 21.2293C21.7204 21.4845 21.5567 21.7136 21.3515 21.9019C21.1463 22.0901 20.904 22.2335 20.6402 22.3227C20.3764 22.4119 20.0968 22.4451 19.8194 22.42C16.7423 22.0856 13.7864 21.0341 11.1894 19.35C8.77327 17.8147 6.72478 15.7662 5.18945 13.35C3.49942 10.7412 2.44769 7.77099 2.11944 4.68C2.09446 4.40347 2.12732 4.12476 2.21595 3.86162C2.30457 3.59849 2.44702 3.35669 2.63421 3.15162C2.82141 2.94655 3.04925 2.78271 3.30324 2.67052C3.55722 2.55833 3.83179 2.50026 4.10945 2.5H7.10945C7.59475 2.49522 8.06524 2.66708 8.43321 2.98353C8.80118 3.29999 9.04152 3.73945 9.10944 4.22C9.23607 5.18007 9.47089 6.12273 9.80945 7.03C9.94399 7.38792 9.97311 7.77691 9.89335 8.15088C9.8136 8.52485 9.62831 8.86811 9.35944 9.14L8.08945 10.41C9.513 12.9135 11.5859 14.9864 14.0894 16.41L15.3594 15.14C15.6313 14.8711 15.9746 14.6858 16.3486 14.6061C16.7225 14.5263 17.1115 14.5555 17.4694 14.69C18.3767 15.0286 19.3194 15.2634 20.2794 15.39C20.7652 15.4585 21.2088 15.7032 21.526 16.0775C21.8431 16.4518 22.0116 16.9296 21.9994 17.42Z' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")no-repeat;
     background-size: 100%;
+    vertical-align: middle;
 }
 
 .nav-link:hover .icon.icon-phone,
@@ -416,7 +420,7 @@ button {
 .nav-item.active span::after {
     content: "";
     position: absolute;
-    bottom: -12px;
+    bottom: -5px;
     left: 0;
     width: 100%;
     height: 3px;
@@ -427,7 +431,7 @@ button {
 
 /* Breadcrumb Styles */
 .breadcrumb-container {
-    padding: 38px 0 24px;
+    padding: 29px 60px 24px;
 }
 
 .breadcrumb {
@@ -457,7 +461,7 @@ button {
 /* Main Content Area Styles */
 .main-content {
     padding: 0;
-    /* background-color: var(--bg-secondary); */
+    background-color: var(--bg-secondary);
 }
 
 .content-wrapper {
@@ -512,7 +516,7 @@ button {
     background-color: white;
     appearance: none;
     min-width: 200px;
-    font-size: var(--font-lg);
+    font-size: var(--font-md);
 }
 
 .search-icon {
@@ -534,7 +538,7 @@ button {
     background-color: white;
     appearance: none;
     min-width: 200px;
-    font-size: var(--font-lg);
+    font-size: var(--font-md);
 }
 
 /* Tab 樣式 */
@@ -546,7 +550,7 @@ button {
     display: flex;
     margin-bottom: 20px;
     border-bottom: 1px solid #E0E0E0;
-    font-size: var(--font-lg);
+    font-size: var(--font-md);
 }
 
 .tab {
@@ -592,7 +596,7 @@ button {
     background-color: white;
     appearance: none;
     min-width: 200px;
-    font-size: var(--font-lg);
+    font-size: var(--font-md);
 }
 
 .dropdown-icon {
@@ -643,7 +647,7 @@ button {
 }
 
 .inner-content {
-    padding: 65px;
+    padding: 55px 65px;
 }
 
 .content-header {
@@ -784,7 +788,7 @@ button {
     background: var(--primary-gradient);
     color: #fff;
     padding: var(--spacing-xl) 0 var(--spacing-md);
-    font-size: var(--font-xl);
+    font-size: var(--font-lg);
 }
 
 .footer-content {
@@ -800,6 +804,8 @@ button {
 
 .phone-numbers i {
     margin-right: 5px;
+    width: 20px;
+    height: 20px;
 }
 
 .phone-numbers p {
@@ -873,8 +879,6 @@ button {
     margin-bottom: var(--spacing-xs);
     font-size: 1rem;
 }
-
-
 
 /* 公告內頁樣式 */
 
@@ -1055,6 +1059,7 @@ button {
 }
 
 .info-section {
+    padding: 50px;
     margin-bottom: var(--spacing-xl);
 }
 
@@ -1338,7 +1343,7 @@ button {
 }
 
 .inner-header h1 {
-    font-size: var(--font-xl);
+    font-size: var(--font-lg);
     color: #000;
     margin-bottom: var(--spacing-md);
     font-weight: 700;
@@ -1521,6 +1526,48 @@ button {
     background-size: 100%;
 }
 
+
+/* ===== 統一的RWD媒體查詢區域 ===== */
+.box {
+    border-radius: 10px;
+    background-color: var(--bg-primary);
+    padding: 20px 20px 10px;
+}
+
+.light-blue-bg-box {
+    background-color: var(--bg-light);
+    border-radius: 24px;
+    padding: 24px 64px;
+    border: 2px solid var(--bg-primary);
+    word-wrap: break-word;
+}
+
+.colorlink {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+.colorlink:hover {
+    text-decoration: none;
+}
+
+
+
+/* 整列點擊功能 */
+.clickable-row {
+    position: relative;
+    cursor: pointer;
+}
+
+.clickable-row:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.clickable-row td {
+    position: relative;
+}
+
+
 /* ===== 統一的RWD媒體查詢區域 ===== */
 
 /* 大螢幕 - 1440px */
@@ -1685,6 +1732,8 @@ button {
     .content-wrapper {
         flex-direction: column;
         display: flex;
+        padding: 0;
+        gap: 0;
     }
 
     .sidebar {
@@ -1733,6 +1782,7 @@ button {
 
 /* 手機尺寸 - 768px */
 @media (max-width: 768px) {
+
 
     .inner-header {
 
@@ -2026,6 +2076,16 @@ button {
     .prev-btn {
         max-width: revert;
     }
+
+    .info-section {
+        padding: 0;
+    }
+
+    .light-blue-bg-box {
+        padding: 5%;
+
+    }
+
 }
 
 /* 小手機尺寸 - 576px */
@@ -2079,82 +2139,4 @@ button {
     }
 
 
-}
-
-
-/* 整行可點擊的表格樣式 (適用於所有視圖) */
-/* 表格行的相對定位和交互效果 */
-.table-container table tr {
-    position: relative;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.table-container table tr:hover {
-    background-color: #fff;
-}
-
-/* 使整行可點擊的偽元素 */
-.table-container table tr:has(a)::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-/* 確保原始鏈接正常顯示和可點擊 */
-.table-container table td a {
-    position: relative;
-    z-index: 2;
-    /* 讓連結延伸至整個單元格 */
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-}
-
-/* 對於無法使用:has選擇器的瀏覽器，備用方案 */
-.table-container table tr.clickable {
-    cursor: pointer;
-}
-
-.table-container table tr.clickable::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-/* 針對卡片視圖的特殊處理 */
-.table-card-responsive tr::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    border-radius: var(--radius-md);
-}
-
-.table-card-responsive tr:has(a) {
-    cursor: pointer;
-}
-
-/* 如果使用JavaScript設置了href屬性在tr上 */
-.table-container table tr[data-href],
-.table-card-responsive tr[data-href] {
-    cursor: pointer;
-}
-
-/* ===== 統一的RWD媒體查詢區域 ===== */
-.box {
-    border-radius: 10px;
-    background-color: #fff;
-    padding: 20px 20px 10px;
 }

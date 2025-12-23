@@ -1,21 +1,61 @@
+.main-content {
+    padding: 0;
+    background-color: inherit !important;
+}
+
 /*---------swiper 滿版設計--------------*/
+
+.section_home_slider {
+    transition: background 0.5s ease;
+    position: relative;
+}
+
+.section_home_slider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    right: -100vw;
+    bottom: 0;
+    background: inherit;
+    z-index: -1;
+    transition: background 0.5s ease;
+}
+
+/* 動態背景類別 */
+.section_home_slider.slide-1 {
+    background: #4067ff;
+}
+
+.section_home_slider.slide-2 {
+    background: #4067ff;
+}
+
+.section_home_slider.slide-3 {
+    background: #4067ff;
+}
+
 .full-width-slider {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  overflow: hidden;
+    width: 100%;
+    max-width: 1405px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
 .swiper-slide {
-  width: 100vw;
-  height: 60vh;
+    width: 100%;
+    height: 300px;
 }
 
 .swiper-slide picture,
 .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* 手機版調整 */
@@ -30,7 +70,7 @@
 }
 
 .section_home_links {
-    padding: 64px 0
+    padding: 50px 0
 }
 
 .section_home_links ul {
@@ -50,14 +90,25 @@
 
 .section_home_links ul li a {
     text-align: center;
-    font-size: var(--font-xl);
+    font-size: var(--font-md);
     border: 3px solid var(--primary-color);
     width: 100%;
     display: inline-flex;
-    border-radius: 24px;
+    border-radius: 100px;
     align-items: center;
     justify-content: center;
-    padding: 3% 0;
+    padding: 15px 0;
+    line-height: 1.3;
+}
+
+/* Home Links 右箭頭圖示 */
+.section_home_links ul li a::after {
+    content: "\f105";
+    /* Font Awesome fa-angle-right 的 Unicode */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-left: 27px;
+    font-size: 27px;
 }
 
 .section_home_links ul li.link-product i {
@@ -81,9 +132,15 @@
 
 /* 統計圖表區塊樣式 */
 .section_home_data {
-    background-color: #fbfbfb;
+    background: linear-gradient(0deg, #E9F1FC, #E9F1FC),
+        linear-gradient(17.21deg, rgba(112, 174, 240, 0.2) 17.26%, rgba(255, 255, 255, 0) 69.41%);
     padding: 40px;
-    margin-top: 20px;
+}
+
+
+.section_home_data .swiper-slide {
+    padding: 30px;
+
 }
 
 .section_home_data .title_block {
@@ -109,11 +166,25 @@
 .stats-cards {
     display: flex;
     gap: 12px;
-    margin-bottom: 20px;
+
+    box-shadow:
+        0px 19px 28px 0px rgba(0, 0, 0, 0.4);
 }
+
+.stats-card-title {
+    background-color: #18739C;
+    border-radius: 100px;
+    color: #fff;
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+    padding: 0 20px;
+}
+
 
 .stats-card {
     flex: 1;
+
 }
 
 .stats-card h3 {
@@ -121,19 +192,24 @@
 }
 
 .chart-container {
-    height: 250px;
+    height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 }
 
-.chart-container canvas {
+.chart-container canvas,
+.chart-container>div {
     width: 100% !important;
-    height: 100% !important;
+    height: 350px !important;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* 統計圖表分頁器樣式 */
+
 .stats-swiper .slider_controls .stats-pagination {
     text-align: center;
 }
@@ -162,6 +238,7 @@
 @media (max-width: 768px) {
     .stats-cards {
         flex-direction: column;
+        box-shadow: none;
     }
 
     .section_home_stats {
@@ -173,6 +250,7 @@
 .section_home_news {
     padding: 40px;
     margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .section_home_news .title_block {
@@ -188,6 +266,8 @@
     align-items: center;
 
 }
+
+
 
 .section_home_news .title_block h2 i {
     width: 40px;
@@ -326,8 +406,8 @@
     }
 
     .section_home_links ul li {
-        max-width: 40%;
-        width: 40%;
+        max-width: 100%;
+        width: 100%;
     }
 
     .section_home_links ul li a {
@@ -370,4 +450,13 @@
         width: 24px;
         height: 24px;
     }
+
+    .home-wrapper .container {
+        padding: 0;
+    }
+
+    .section_home_data .swiper-slide {
+        padding: 0;
+    }
+
 }
