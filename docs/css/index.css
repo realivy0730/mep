@@ -234,17 +234,6 @@
     transition-delay: 0s;
 }
 
-/* 響應式設計 */
-@media (max-width: 768px) {
-    .stats-cards {
-        flex-direction: column;
-        box-shadow: none;
-    }
-
-    .section_home_stats {
-        padding: 20px;
-    }
-}
 
 /* 最新消息區塊樣式 */
 .section_home_news {
@@ -364,6 +353,13 @@
 }
 
 @media (max-width: 1000px) {
+
+    /* 響應式設計 */
+    .stats-cards {
+
+        box-shadow: none;
+    }
+
     .section_home_news {
         padding: 6%;
     }
@@ -469,4 +465,16 @@
         font-size: 16px;
     }
 
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .stats-cards {
+        flex-direction: column;
+
+    }
+
+    .section_home_stats {
+        padding: 20px;
+    }
 }
