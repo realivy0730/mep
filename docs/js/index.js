@@ -121,8 +121,10 @@ function initializeCharts() {
             console.log(`容器 ${containerId} 寬度:`, containerWidth);
             
             if (containerWidth < 768) {
+                console.log(`${containerId} 使用小尺寸字體: name=12, percent=16`);
                 return { name: 12, percent: 16 };
             }
+            console.log(`${containerId} 使用大尺寸字體: name=14, percent=22`);
             return { name: 14, percent: 22 };
         }
         
