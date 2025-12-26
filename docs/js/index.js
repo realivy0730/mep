@@ -120,8 +120,8 @@ function initializeCharts() {
             const containerWidth = container.offsetWidth;
             console.log(`容器 ${containerId} 寬度:`, containerWidth);
             
-            if (containerWidth < 400) {
-                return { name: 10, percent: 16 };
+            if (containerWidth < 768) {
+                return { name: 12, percent: 16 };
             }
             return { name: 14, percent: 22 };
         }
