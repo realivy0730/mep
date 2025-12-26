@@ -357,7 +357,13 @@
 }
 
 /* 響應式設計 */
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
+    .container {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 1000px) {
     .section_home_news {
         padding: 6%;
     }
@@ -451,12 +457,16 @@
         height: 24px;
     }
 
-    .home-wrapper .container {
+    .section_home_data .container {
         padding: 0;
     }
 
     .section_home_data .swiper-slide {
         padding: 0;
+    }
+
+    .stats-card h3 {
+        font-size: 16px;
     }
 
 }

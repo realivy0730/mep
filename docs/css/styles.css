@@ -549,24 +549,27 @@ button {
 .tabs {
     display: flex;
     margin-bottom: 20px;
-    border-bottom: 1px solid #E0E0E0;
     font-size: var(--font-md);
 }
 
 .tab {
-    padding: 10px 15px;
+    padding: 5px 0;
+    margin-right: 16px;
     cursor: pointer;
-    border-bottom: 2px solid #0D6389;
     transition: all 0.3s ease;
     text-align: center;
     flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 .tab.active {
     color: #fff;
-    border-bottom: 2px solid #0D6389;
     font-weight: 500;
     background-color: #0D6389;
+
 }
 
 .tab-content {

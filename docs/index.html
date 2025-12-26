@@ -31,79 +31,78 @@
       <!-- Main Content Area -->
       <main class="main-content">
         <div class="home-wrapper">
-          <div class="container">
-            <section class="section_home_slider">
-              <div class="swiper full-width-slider">
-                <div class="swiper-wrapper">
-                  <!-- Slide 1 -->
-                  <div class="swiper-slide">
-                    <picture>
-                      <source
-                        media="(min-width: 768px)"
-                        srcset="images/banner_01.png"
-                      />
-                      <img
-                        src="images/banner_01_m.png"
-                        alt="能源效率管理系統 Banner 1"
-                      />
-                    </picture>
-                  </div>
-
-                  <!-- Slide 2 -->
-                  <div class="swiper-slide">
-                    <picture>
-                      <source
-                        media="(min-width: 768px)"
-                        srcset="images/banner_02.png"
-                      />
-                      <img
-                        src="images/banner_02_m.png"
-                        alt="能源效率管理系統 Banner 2"
-                      />
-                    </picture>
-                  </div>
-
-                  <!-- Slide 3 -->
-                  <div class="swiper-slide">
-                    <picture>
-                      <source
-                        media="(min-width: 768px)"
-                        srcset="images/banner_03.png"
-                      />
-                      <img
-                        src="images/banner_03_m.png"
-                        alt="能源效率管理系統 Banner 3"
-                      />
-                    </picture>
-                  </div>
+          <section class="section_home_slider">
+            <div class="swiper full-width-slider">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="images/banner_01.png"
+                    />
+                    <img
+                      src="images/banner_01_m.png"
+                      alt="能源效率管理系統 Banner 1"
+                    />
+                  </picture>
                 </div>
 
-                <!-- Swiper 控制元件 -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-pagination"></div>
-              </div>
-            </section>
-          </div>
-          <div class="container">
-            <section class="section_home_links">
-              <ul>
-                <li class="link-product">
-                  <a href="javascript:void(0);" title="已登錄備查產品">
-                    <i></i>
-                    <span>已登錄<br />備查產品</span></a
-                  >
-                </li>
-                <li class="link-icon-login">
-                  <a href="javascript:void(0);" title="廠商登入">
-                    <i></i>
-                    <span>廠商<br />登入</span></a
-                  >
-                </li>
-              </ul>
-            </section>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="images/banner_02.png"
+                    />
+                    <img
+                      src="images/banner_02_m.png"
+                      alt="能源效率管理系統 Banner 2"
+                    />
+                  </picture>
+                </div>
 
-            <section class="section_home_data">
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="images/banner_03.png"
+                    />
+                    <img
+                      src="images/banner_03_m.png"
+                      alt="能源效率管理系統 Banner 3"
+                    />
+                  </picture>
+                </div>
+              </div>
+
+              <!-- Swiper 控制元件 -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </section>
+
+          <section class="section_home_links container">
+            <ul>
+              <li class="link-product">
+                <a href="javascript:void(0);" title="已登錄備查產品">
+                  <i></i>
+                  <span>已登錄<br />備查產品</span></a
+                >
+              </li>
+              <li class="link-icon-login">
+                <a href="javascript:void(0);" title="廠商登入">
+                  <i></i>
+                  <span>廠商<br />登入</span></a
+                >
+              </li>
+            </ul>
+          </section>
+
+          <section class="section_home_data">
+            <div class="container">
               <div class="title_block">
                 <h2><i></i><span>政府公式資料統計與下載</span></h2>
                 <div class="linkMore">
@@ -153,73 +152,93 @@
                     </div>
                   </li>
 
+                  <li class="swiper-slide">
+                    <div class="stats-cards box">
+                      <div class="stats-card">
+                        <h3 class="stats-card-title">
+                          各等級之空壓機登錄數量及占比
+                        </h3>
+                        <div class="chart-container">
+                          <div id="labelApplicationChart2"></div>
+                        </div>
+                      </div>
 
+                      <div class="stats-card">
+                        <h3 class="stats-card-title">
+                          各等級之空壓機登錄數量及占比
+                        </h3>
+                        <div class="chart-container">
+                          <div id="marketShareChart2"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
 
                 <div class="slider_controls">
                   <div class="stats-pagination"></div>
                 </div>
               </div>
-            </section>
+            </div>
+          </section>
 
-            <section class="section_home_news">
-              <div class="title_block">
-                <h2><i></i>最新消息</h2>
-                <div class="linkMore">
-                  <a href="announcements.html" title="更多消息">
-                    <span>看更多</span> <i></i
-                  ></a>
-                </div>
+          <section class="section_home_news container">
+            <div class="title_block">
+              <h2><i></i>最新消息</h2>
+              <div class="linkMore">
+                <a href="announcements.html" title="更多消息">
+                  <span>看更多</span> <i></i
+                ></a>
               </div>
-              <ul class="news_list">
-                <li>
-                  <a href="javascript:void(0);">
-                    <span class="news_date">2024-05-20</span>
-                    <span class="news_title"
-                      >能源效率管理系統2.0版本上線公告</span
-                    >
-                    <i class="fas fa-chevron-right"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                    <span class="news_date">2024-05-15</span>
-                    <span class="news_title"
-                      >2024年第二季能源效率標章申請開放公告</span
-                    >
-                    <i class="fas fa-chevron-right"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                    <span class="news_date">2024-05-10</span>
-                    <span class="news_title"
-                      >關於調整能源效率分級標準之說明會通知</span
-                    >
-                    <i class="fas fa-chevron-right"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                    <span class="news_date">2024-05-05</span>
-                    <span class="news_title"
-                      >2024年度能源效率標章推廣計畫開始申請</span
-                    >
-                    <i class="fas fa-chevron-right"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                    <span class="news_date">2024-05-01</span>
-                    <span class="news_title"
-                      >能源效率管理系統維護公告 (5/10-5/11)</span
-                    >
-                    <i class="fas fa-chevron-right"></i>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </div>
+            </div>
+            <ul class="news_list">
+              <li>
+                <a href="javascript:void(0);">
+                  <span class="news_date">2024-05-20</span>
+                  <span class="news_title"
+                    >能源效率管理系統2.0版本上線公告</span
+                  >
+                  <i class="fas fa-chevron-right"></i>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <span class="news_date">2024-05-15</span>
+                  <span class="news_title"
+                    >2024年第二季能源效率標章申請開放公告</span
+                  >
+                  <i class="fas fa-chevron-right"></i>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <span class="news_date">2024-05-10</span>
+                  <span class="news_title"
+                    >關於調整能源效率分級標準之說明會通知</span
+                  >
+                  <i class="fas fa-chevron-right"></i>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <span class="news_date">2024-05-05</span>
+                  <span class="news_title"
+                    >2024年度能源效率標章推廣計畫開始申請</span
+                  >
+                  <i class="fas fa-chevron-right"></i>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <span class="news_date">2024-05-01</span>
+                  <span class="news_title"
+                    >能源效率管理系統維護公告 (5/10-5/11)</span
+                  >
+                  <i class="fas fa-chevron-right"></i>
+                </a>
+              </li>
+            </ul>
+          </section>
         </div>
       </main>
 

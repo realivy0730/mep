@@ -265,11 +265,18 @@
     transform: inherit
 }
 
+.catalog-list {
+    display: flex;
+    justify-content: center;
+}
+
 .catalog-list ul {
     display: flex;
     flex-wrap: wrap;
     gap: 20px 65px;
     align-items: center;
+    justify-content: flex-start;
+    max-width: fit-content;
 }
 
 
@@ -282,7 +289,7 @@
 .catalog-list ul li .cat-icon {
     background-color: #ECEDFF;
     border-radius: 16px;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     text-align: center;
     width: 140px;
     height: 140px;
@@ -297,9 +304,17 @@
     background-color: #E9F1FC;
 }
 
+.catalog-list ul li a:hover .cat-icon {
+    border-color: var(--secondary-color);
+}
+
 .catalog-list ul li .cat-icon i {
     width: 65%;
     height: 65%;
+}
+
+.catalog-list ul li :hover .cat-icon {
+    border: 2px solid #fff;
 }
 
 .catalog-list ul li .name {
