@@ -120,7 +120,7 @@ function initializeCharts() {
             const containerWidth = container.offsetWidth;
             console.log(`容器 ${containerId} 寬度:`, containerWidth);
             
-            if (containerWidth < 768) {
+            if (containerWidth < 400) {
                 console.log(`${containerId} 使用小尺寸字體: name=12, percent=16`);
                 return { name: 12, percent: 16 };
             }
